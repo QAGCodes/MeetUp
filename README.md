@@ -91,7 +91,7 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 
 
 ## Wireframes
-<img src="MeetUp_Wireframe![image](MeetUp_WireFrame.png)" width=600>
+<img src="MeetUp_Wireframe.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
