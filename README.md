@@ -96,6 +96,8 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 
 ### [BONUS] Digital Wireframes & Mockups
 
+Link to [Figma Digital WireFrame](https://www.figma.com/file/ydklulrn1jUHDF9UGNPyGD/Meet-Up?node-id=0%3A1)
+
 ### [BONUS] Interactive Prototype
 
 Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9UGNPyGD/Meet-Up?node-id=1%3A2&scaling=scale-down)
