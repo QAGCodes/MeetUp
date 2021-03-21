@@ -11,16 +11,15 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+MeetUp is an app that instantly connects you with people around you. Unlike Tinder and Bumble, which are mainly aimed at forming romantic relationships which makes people more reluctant to chat with others, MeetUp is about meeting someone new for a coffee, lunch, or even just exchanging talks about a subject that both users are interested in, all easily and with no hassle. The instantaneous aspect of MeetUp (to immediatly find someone to meet on the spot) is one of the app's important features, which are hard to provide in other geosocial networking applications.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Geosocial networking
+- **Mobile:** The concept is most suitable to be applied on a mobile device, where one is able to use it instantly anywhere. The app relies on the idea that it is real-time and easy to access. Whenever you're bored you can instantly use it anywhere.
+- **Story:** Getting to know new people and forming valuable connections might be hard to a fair amount of us, and quarantine season didn't help the cause at all since most of us were unable to go out or even get together with friends.
+- **Market:** The market virtually includes everyone, but we believe that it is going to be most popular among teenagers and young adults, specifically college students. This group of people will use it to get to know new friends with common interests (maybe even introduce them to new exciting interests) and interesting personalities, allowing them to form new connections. The app will be helpful not only to social butterflies since it provides ease of access, but also to those who may struggle with initiating social connections since it provides a starting point for forming these connections. It also serves as a good starting point for people who just arrived at a new city/campus/etc to kickstart their social lives.
+- **Habit:** The idea of how much habit-forming this app is will depened on the users. Since it is easy to access immediatly, people could use it everytime they are waiting outside for something, are just generally bored with nothing to do, or are actively trying to get to know new people.
+- **Scope:** The app's idea is relativley simple and easy to implement. It would require sign in/up screens where you can also sign in/up with exisitng social media accounts, then it would provide a stream of MeetUp requests that would provide more details to the user about the inviter (Interests, where to meet up, etc...)
 
 ## Product Spec
 
