@@ -102,7 +102,37 @@ Link to [Figma Digital WireFrame](https://www.figma.com/file/ydklulrn1jUHDF9UGNP
 Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9UGNPyGD/Meet-Up?node-id=1%3A2&scaling=scale-down)
 
 ## Schema 
-[This section will be completed in Unit 9]
+### Models
+#### Post
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   |       |    |  |
+   |         | |  |
+   |          |      |  |
+   |        |    |  |
+   |  |    |  |
+   |     |    |  |
+   |      |  |  |
+   |      |  |  |
+### Networking
+#### List of network requests by screen
+   - Home Feed Screen
+      - (Read/GET) Query all posts where user is author
+         ```swift
+         let query = PFQuery(className:"Post")
+         query.whereKey("author", equalTo: currentUser)
+         query.order(byDescending: "createdAt")
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let posts = posts {
+               print("Successfully retrieved \(posts.count) posts.")
+           // TODO: Do something with posts...
+            }
+         }
+         ```
+      
 ### Models
 [Add table of models]
 ### Networking
