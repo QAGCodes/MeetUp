@@ -124,6 +124,20 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
    | Bio | String | User’s bio |
    | Profile Image | File | Image uploaded by user |
 
+#### Invites
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userid | integer | ID of users that post them |
+   | inviteid | integer | identifier for each invite |
+   | time | string | time user wants to hangout |
+   | location | string | whether the user wants to meet |
+   | status | bool | status of invite, active or inactive |
+   | invite details | string | users description of invite |
+   | date | date date of the meet up |
+
+
+
 
 
  
