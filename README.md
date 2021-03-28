@@ -111,6 +111,18 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
    | Username | String | Username to be used for identification in invites and login |
    | Password | String | Used for logging in |
 
+#### Profiles
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | Full Name | String | User’s first and last name |
+   | College | String | College user attends |
+   | Major | String | User’s major |
+   | Year | String | User’s current year in college |
+   | Interests | String | User’s interests |
+   | Userid | Integer | Unique identifier for each user |
+   | Bio | String | User’s bio |
+   | Profile Image | File | Image uploaded by user |
 
 
 
