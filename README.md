@@ -107,14 +107,14 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | Userid | Integer | Unique identifier across tables for each user |
-   |         | |  |
-   |          |      |  |
-   |        |    |  |
-   |  |    |  |
-   |     |    |  |
-   |      |  |  |
-   |      |  |  |
+   | Userid | Integer | Unique identifier across tables for each user |   
+   | Username | String | Username to be used for identification in invites and login |
+   | Password | String | Used for logging in |
+
+
+
+
+ 
 ### Networking
 #### List of network requests by screen
    - Home Feed Screen
