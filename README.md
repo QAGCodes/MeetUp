@@ -107,12 +107,7 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-
-| Userid | 
-Integer | Unique identifier across tables for each user |
-
-
-
+   | Userid | Integer | Unique identifier across tables for each user |
    |         | |  |
    |          |      |  |
    |        |    |  |
