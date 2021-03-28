@@ -103,11 +103,16 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
 
 ## Schema 
 ### Models
-#### Post
+#### Users
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   |       |    |  |
+
+| Userid | 
+Integer | Unique identifier across tables for each user |
+
+
+
    |         | |  |
    |          |      |  |
    |        |    |  |
