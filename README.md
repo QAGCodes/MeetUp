@@ -143,25 +143,23 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
  
 ### Networking
 #### List of network requests by screen
-   - Home Feed Screen
-      - (Read/GET) Query all posts where user is author
-         ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
-            }
-         }
-         ```
+   - login screen
+      - (Read/GET) Verify that the user exists in the database and the password is correct
+   - sign up screen
+      - (POST) register the user's details (first and last names, username, password) into the database
+   - invite stream screen
+      - (Read/GET) query active invites from the database
+   - invite details screen
+      - (Read/GET) query active invites from the database
+   - user profile screen
+      - (Read/GET) query the selected invite from the database to show its details on the screen
+   - edit profile screen
+      - (POST/GET) query the current user's profile from the database and post the changes to the database again
+   - create invites screen
+      - (POST) post the invite's details to the database
+   - previous invites screen
+      - (Read/GET) query both active and inactive invites of the user from the database
+   - edit invite screen
+      - (POST/GET) query the selected invite from the database and post the changes to the database again
       
 ### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
