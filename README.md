@@ -161,5 +161,3 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
       - (Read/GET) query both active and inactive invites of the user from the database
    - edit invite screen
       - (POST/GET) query the selected invite from the database and post the changes to the database again
-      
-### Models
