@@ -22,6 +22,7 @@
 		00C9AF7A261008AF00D9C2D4 /* MeetUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9AF79261008AF00D9C2D4 /* MeetUpUITests.swift */; };
 		1624EB717901D3AC80A3D7A9 /* Pods_MeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170AA9D52C9EF86C34E23E48 /* Pods_MeetUp.framework */; };
 		5A639CA22618F07400B046DE /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A639CA12618F07400B046DE /* UserProfileViewController.swift */; };
+		5A639CA7261902CC00B046DE /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A639CA6261902CC00B046DE /* EditProfileViewController.swift */; };
 		7E41880725F80705D3AB4C1B /* Pods_MeetUp_MeetUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C996FCCEA3D7DBB5594795 /* Pods_MeetUp_MeetUpUITests.framework */; };
 		D9B76157ACED7B5F6D83C69B /* Pods_MeetUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B9DD489CBDFC347D9EFB4 /* Pods_MeetUpTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		170AA9D52C9EF86C34E23E48 /* Pods_MeetUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B430220FB51A79BE97D817F /* Pods-MeetUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetUp.release.xcconfig"; path = "Target Support Files/Pods-MeetUp/Pods-MeetUp.release.xcconfig"; sourceTree = "<group>"; };
 		5A639CA12618F07400B046DE /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		5A639CA6261902CC00B046DE /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		6685A4B990F1952FDB22619D /* Pods-MeetUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetUp.debug.xcconfig"; path = "Target Support Files/Pods-MeetUp/Pods-MeetUp.debug.xcconfig"; sourceTree = "<group>"; };
 		68EE1FF160A99D1AD736B3E7 /* Pods-MeetUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetUpTests.release.xcconfig"; path = "Target Support Files/Pods-MeetUpTests/Pods-MeetUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		B70805E7BBEBAFB452E0D40C /* Pods-MeetUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MeetUpTests/Pods-MeetUpTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				000990522610F9E0005963EC /* CreateOrEditViewController.swift */,
 				0009905726110F0E005963EC /* SettingsViewController.swift */,
 				5A639CA12618F07400B046DE /* UserProfileViewController.swift */,
+				5A639CA6261902CC00B046DE /* EditProfileViewController.swift */,
 			);
 			path = MeetUp;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				00C9AF58261008AB00D9C2D4 /* AppDelegate.swift in Sources */,
 				00C9AF5A261008AB00D9C2D4 /* SceneDelegate.swift in Sources */,
 				5A639CA22618F07400B046DE /* UserProfileViewController.swift in Sources */,
+				5A639CA7261902CC00B046DE /* EditProfileViewController.swift in Sources */,
 				0009905826110F0E005963EC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
