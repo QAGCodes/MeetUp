@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignupViewController: ViewController {
 
@@ -20,14 +21,32 @@ class SignupViewController: ViewController {
     }
     
     @IBAction func signupButton(_ sender: Any) {
-        let firstName = firstNameField.text
-        let lastName = lastNameField.text
-        let username = usernameField.text
-        let password = passwordField.text
+        let firstName = firstNameField.text!
+        let lastName = lastNameField.text!
+        let username = usernameField.text!
+        let password = passwordField.text!
         
-        print(firstName! + " " +  lastName!)
-        print(username!)
-        print(password!)
+        let user = PFObject(className: "User")
+        user["username"] = username
+        user["firstName"] = firstName
+        user["lastName"] = lastName
+        user["password"] = password
+        
+        
+        
+        user.saveInBackground{(success, error) in
+            if success {
+                print("Signup successful")
+                //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }else{
+                print("Error: \(error?.localizedDescription)")
+            }
+        }
+        
+        //print(firstName! + " " +  lastName!)
+        //print(username!)
+        //print(password!)
+        
     }
     
     /*

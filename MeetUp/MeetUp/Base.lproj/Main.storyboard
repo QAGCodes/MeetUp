@@ -56,7 +56,6 @@
         <!--LoginV Iew Controller-->
         <scene sceneID="BgM-TQ-pL4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="99d-Ke-Cxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LoginViewController" id="F26-Ac-z31" customClass="LoginVIewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tnh-yy-vhI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -93,8 +92,10 @@
                     <connections>
                         <outlet property="PasswordField" destination="6ug-oW-hef" id="sHo-GG-oY3"/>
                         <outlet property="usernameField" destination="RCb-rm-dtu" id="GvK-Ov-TL6"/>
+                        <segue destination="BOh-HK-gsQ" kind="presentation" identifier="calendarSegue" id="Epl-iF-ZHe"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99d-Ke-Cxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957" y="94"/>
         </scene>
@@ -162,7 +163,7 @@
             <objects>
                 <viewController id="evY-bj-xjk" customClass="CreateOrEditViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgR-gq-6t9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-68-xAf">
@@ -235,7 +236,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BOh-HK-gsQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a1h-io-4h1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -317,6 +318,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ted-Me-GVI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wj2-G5-UKw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
