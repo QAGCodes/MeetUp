@@ -12,8 +12,6 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        /* tempLabel.text = "gfmbgsjfvksgi shigsbkg skfg ksbjds bgkj dfbgjsbkfjdb f kjsv fkjsvf ksvf kjsvf jkzvfzkjfv sjkdfv ksdvfkjsdvf ksjvf ksfv skfvs kfvskjfv skjfv ksfvs jkdvsjdvfjks gfv skjfsjdvfsjf sfs" */
         
         // Do any additional setup after loading the view.
     }
