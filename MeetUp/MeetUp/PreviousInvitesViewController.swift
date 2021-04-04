@@ -7,6 +7,8 @@
 
 import UIKit
 
+var inviteNums:[Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
 class PreviousInvitesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 15
@@ -15,7 +17,7 @@ class PreviousInvitesViewController: UIViewController, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousInviteCell") as! PreviousInviteCell
         cell.notesLabel.text = "Notes:\nBurrito time anyone?"
-        cell.acceptedLabel.text = "Accepted Invites: 3"
+        cell.acceptedLabel.text = "Accepted Invites: \(inviteNums[indexPath.row])"
         cell.dateTimeLabel.text = "Monday, April 21 2021 at 1:00 pm"
         cell.locationLabel.text = "Chipotle, WL"
         cell.editButton.layer.cornerRadius = 5

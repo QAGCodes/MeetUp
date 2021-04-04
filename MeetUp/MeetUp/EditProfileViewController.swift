@@ -9,7 +9,17 @@ import UIKit
 
 class EditProfileViewController: UIViewController {
 
-    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet var fullNameField: UITextField!
+    @IBOutlet var dispNameField: UITextField!
+    @IBOutlet var collegeField: UITextField!
+    @IBOutlet var majorField: UITextField!
+    @IBOutlet var bioField: UITextField!
+    @IBOutlet var interestsField: UITextField!
+    @IBAction func saveButton(_ sender: UIButton) {
+        self.dismiss(animated: true) {
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
