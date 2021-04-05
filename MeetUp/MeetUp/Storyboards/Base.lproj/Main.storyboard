@@ -92,6 +92,7 @@
                     <connections>
                         <outlet property="PasswordField" destination="6ug-oW-hef" id="sHo-GG-oY3"/>
                         <outlet property="usernameField" destination="RCb-rm-dtu" id="GvK-Ov-TL6"/>
+                        <segue destination="BOh-HK-gsQ" kind="presentation" identifier="calendarSegue" id="Epl-iF-ZHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99d-Ke-Cxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -394,7 +395,7 @@
             <objects>
                 <viewController id="evY-bj-xjk" customClass="CreateOrEditViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgR-gq-6t9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-68-xAf">
@@ -467,7 +468,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BOh-HK-gsQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a1h-io-4h1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
