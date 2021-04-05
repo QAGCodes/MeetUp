@@ -45,7 +45,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <segue destination="F26-Ac-z31" kind="presentation" identifier="loginSegue" id="d4w-1p-pOg"/>
+                        <segue destination="F26-Ac-z31" kind="presentation" identifier="loginSegue" modalPresentationStyle="automatic" id="d4w-1p-pOg"/>
                         <segue destination="k3u-Ke-VVI" kind="presentation" identifier="signupSegue" id="gpr-pY-PoW"/>
                     </connections>
                 </viewController>
@@ -71,7 +71,7 @@
                                 </state>
                                 <connections>
                                     <action selector="userLogin:" destination="F26-Ac-z31" eventType="touchUpInside" id="nfr-Nz-4fW"/>
-                                    <segue destination="BaU-Ji-siH" kind="presentation" identifier="InviteStream" id="jb3-Aq-2CU"/>
+                                    <segue destination="BaU-Ji-siH" kind="presentation" identifier="InviteStream" modalPresentationStyle="fullScreen" id="jb3-Aq-2CU"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-rm-dtu">
@@ -246,7 +246,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="InviteStream" id="BaU-Ji-siH" customClass="InvitesTableViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="363" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZMK-eI-MIS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -326,10 +326,11 @@
                             <outlet property="delegate" destination="BaU-Ji-siH" id="G0Q-pY-c9v"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="TkV-8y-0y5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvP-RY-cVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957" y="824"/>
+            <point key="canvasLocation" x="957" y="815"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="Vej-Ry-Pii">
@@ -349,6 +350,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signupButton:" destination="k3u-Ke-VVI" eventType="touchUpInside" id="Bgw-1c-gxI"/>
+                                    <segue destination="BaU-Ji-siH" kind="show" identifier="InviteStream" id="wxt-nM-Kg1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oew-1L-7Ae">
@@ -563,6 +565,9 @@
             <point key="canvasLocation" x="1825" y="1527"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jb3-Aq-2CU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
