@@ -6,7 +6,12 @@ target 'MeetUp' do
   use_frameworks!
 
   # Pods for MeetUp
+<<<<<<< HEAD
 	pod 'Parse'
+=======
+    pod 'Parse'
+
+>>>>>>> main
   target 'MeetUpTests' do
     inherit! :search_paths
     # Pods for testing
