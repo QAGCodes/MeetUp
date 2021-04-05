@@ -38,7 +38,7 @@ class SignupViewController: ViewController {
         user.saveInBackground{(success, error) in
             if success {
                 print("Signup successful")
-                //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.performSegue(withIdentifier: "InviteStream", sender: nil)
             }else{
                 print("Error: \(error?.localizedDescription)")
             }
