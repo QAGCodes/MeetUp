@@ -71,7 +71,10 @@
                                 </state>
                                 <connections>
                                     <action selector="userLogin:" destination="F26-Ac-z31" eventType="touchUpInside" id="nfr-Nz-4fW"/>
+<<<<<<< HEAD
                                     <segue destination="BaU-Ji-siH" kind="presentation" identifier="InviteStream" modalPresentationStyle="fullScreen" id="jb3-Aq-2CU"/>
+=======
+>>>>>>> parent of 77cde45 (Connected sign in with invite stream)
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-rm-dtu">
@@ -93,6 +96,7 @@
                     <connections>
                         <outlet property="PasswordField" destination="6ug-oW-hef" id="sHo-GG-oY3"/>
                         <outlet property="usernameField" destination="RCb-rm-dtu" id="GvK-Ov-TL6"/>
+                        <segue destination="BOh-HK-gsQ" kind="presentation" identifier="calendarSegue" id="Epl-iF-ZHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99d-Ke-Cxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -464,12 +468,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cX-L9-3gt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="102"/>
+            <point key="canvasLocation" x="1824.6376811594205" y="93.75"/>
         </scene>
         <!--Invites Table View Controller-->
         <scene sceneID="9Pp-dD-hne">
             <objects>
-                <tableViewController storyboardIdentifier="InviteStream" id="BaU-Ji-siH" customClass="InvitesTableViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BaU-Ji-siH" customClass="InvitesTableViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="363" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZMK-eI-MIS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -556,6 +560,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvP-RY-cVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956.52173913043487" y="814.95535714285711"/>
+<<<<<<< HEAD
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkI-zP-rcH">
                                 <rect key="frame" x="9" y="703" width="396" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -599,6 +604,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olI-rV-RLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5313.04347826087" y="-10.044642857142856"/>
+=======
+>>>>>>> parent of 77cde45 (Connected sign in with invite stream)
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="Vej-Ry-Pii">
@@ -665,7 +672,7 @@
             <objects>
                 <viewController id="evY-bj-xjk" customClass="CreateOrEditViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgR-gq-6t9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-68-xAf">
@@ -730,7 +737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoB-Lo-iUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2735" y="824"/>
+            <point key="canvasLocation" x="2735" y="815"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3BU-dP-Cax">
@@ -738,7 +745,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BOh-HK-gsQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a1h-io-4h1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -748,7 +755,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gx-dT-WvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="824"/>
+            <point key="canvasLocation" x="1825" y="815"/>
         </scene>
         <!--Settings-->
         <scene sceneID="sYm-KX-Pea">
@@ -812,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZE5-JV-D0k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2735" y="1527"/>
+            <point key="canvasLocation" x="2735" y="1519"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5xU-4e-FOr">
@@ -830,7 +837,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0C-eR-xLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="1527"/>
+            <point key="canvasLocation" x="1825" y="1519"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZIE-RX-jr6">
