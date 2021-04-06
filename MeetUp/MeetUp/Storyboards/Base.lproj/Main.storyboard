@@ -72,7 +72,10 @@
                                 <connections>
                                     <action selector="userLogin:" destination="F26-Ac-z31" eventType="touchUpInside" id="nfr-Nz-4fW"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <segue destination="BaU-Ji-siH" kind="presentation" identifier="InviteStream" modalPresentationStyle="fullScreen" id="jb3-Aq-2CU"/>
+=======
+>>>>>>> parent of 77cde45 (Connected sign in with invite stream)
 =======
 >>>>>>> parent of 77cde45 (Connected sign in with invite stream)
                                 </connections>
@@ -561,6 +564,7 @@
             </objects>
             <point key="canvasLocation" x="956.52173913043487" y="814.95535714285711"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkI-zP-rcH">
                                 <rect key="frame" x="9" y="703" width="396" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -604,6 +608,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olI-rV-RLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5313.04347826087" y="-10.044642857142856"/>
+=======
+>>>>>>> parent of 77cde45 (Connected sign in with invite stream)
 =======
 >>>>>>> parent of 77cde45 (Connected sign in with invite stream)
         </scene>
@@ -838,6 +844,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0C-eR-xLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1825" y="1519"/>
+<<<<<<< HEAD
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZIE-RX-jr6">
@@ -874,6 +881,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLg-lY-kWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3615.9420289855075" y="-10.044642857142856"/>
+=======
+>>>>>>> parent of 77cde45 (Connected sign in with invite stream)
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
