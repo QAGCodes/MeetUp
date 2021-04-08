@@ -17,7 +17,7 @@ class LoginVIewController: ViewController {
     var success = false
     
     // Add the identifier of the segue to invite stream
-    var loginSegueToStream = "InviteStream"
+    var loginSegueToStream = ""
     
     
     @IBAction func userLogin(_ sender: Any) {
