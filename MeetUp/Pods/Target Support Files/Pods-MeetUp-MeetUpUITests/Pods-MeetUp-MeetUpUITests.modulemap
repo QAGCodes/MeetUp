@@ -1,0 +1,6 @@
+framework module Pods_MeetUp_MeetUpUITests {
+  umbrella header "Pods-MeetUp-MeetUpUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
