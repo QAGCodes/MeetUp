@@ -132,21 +132,12 @@
 		00E170A8261E9FED0082E159 /* MeetUp */ = {
 			isa = PBXGroup;
 			children = (
-				00E170A9261E9FED0082E159 /* AppDelegate.swift */,
-				00E170AB261E9FED0082E159 /* SceneDelegate.swift */,
-				00E170AD261E9FED0082E159 /* ViewController.swift */,
-				00E170AF261E9FED0082E159 /* Main.storyboard */,
-				00E170DF261EA2F20082E159 /* LoginViewController.swift */,
-				00E170E4261EA30C0082E159 /* SignupViewController.swift */,
+				7B361F372622D7D6006D5371 /* Cells */,
+				7B361F362622D7B2006D5371 /* View Controllers */,
+				7B361F352622D7A1006D5371 /* Delegates */,
+				7B361F342622D78D006D5371 /* Storyboards */,
 				00E170B2261E9FF10082E159 /* Assets.xcassets */,
-				00E170B4261E9FF10082E159 /* LaunchScreen.storyboard */,
 				00E170B7261E9FF10082E159 /* Info.plist */,
-				7BBD8E0A261F78EC00D49681 /* InvitesTableViewController.swift */,
-				7BBD8E0F261F791C00D49681 /* InvitesTableViewCell.swift */,
-				5ACA6B6526223B35004538F3 /* UserProfileViewController.swift */,
-				5ACA6B6A26223EF5004538F3 /* EditProfileViewController.swift */,
-				5ACA6B6F2622401A004538F3 /* PreviousInvitesViewController.swift */,
-				5ACA6B7C26224071004538F3 /* PreviousInviteCell.swift */,
 			);
 			path = MeetUp;
 			sourceTree = "<group>";
@@ -167,6 +158,47 @@
 				00E170CD261E9FF20082E159 /* Info.plist */,
 			);
 			path = MeetUpUITests;
+			sourceTree = "<group>";
+		};
+		7B361F342622D78D006D5371 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				00E170AF261E9FED0082E159 /* Main.storyboard */,
+				00E170B4261E9FF10082E159 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7B361F352622D7A1006D5371 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				00E170A9261E9FED0082E159 /* AppDelegate.swift */,
+				00E170AB261E9FED0082E159 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		7B361F362622D7B2006D5371 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00E170AD261E9FED0082E159 /* ViewController.swift */,
+				00E170DF261EA2F20082E159 /* LoginViewController.swift */,
+				00E170E4261EA30C0082E159 /* SignupViewController.swift */,
+				7BBD8E0A261F78EC00D49681 /* InvitesTableViewController.swift */,
+				5ACA6B6526223B35004538F3 /* UserProfileViewController.swift */,
+				5ACA6B6A26223EF5004538F3 /* EditProfileViewController.swift */,
+				5ACA6B6F2622401A004538F3 /* PreviousInvitesViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7B361F372622D7D6006D5371 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD8E0F261F791C00D49681 /* InvitesTableViewCell.swift */,
+				5ACA6B7C26224071004538F3 /* PreviousInviteCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7BD0089BC000B97194868E4B /* Frameworks */ = {
