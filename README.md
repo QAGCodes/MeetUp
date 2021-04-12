@@ -35,7 +35,7 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 - [ ] User is requested access to location
 - [ ] User is requested access to camera roll 
 - [x] Page for user to post invites
-- [ ] User can post invites with their data being stored in the database
+- [x] User can post invites with their data being stored in the database
 - [x] Page for user to create/edit profile
 - [ ] Users can create/edit their profiles with the change reflecting in the database
 - [ ] User can log out
