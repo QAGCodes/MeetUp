@@ -26,7 +26,7 @@ class CreateInviteViewController: ViewController {
     @IBAction func onPostButton(_ sender: Any) {
         let location = locationTextField.text!
         let dateAndTime = dateTimePicker.date
-        let notes = notesTextField!
+        let notes = notesTextField.text!
         
         let time = dateAndTime.description.components(separatedBy: " ")[1]
         
