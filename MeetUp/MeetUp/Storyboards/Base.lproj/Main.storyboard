@@ -159,6 +159,9 @@
                                             <state key="normal" title="Accept ">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="onAccept:" destination="Vo1-dv-uHd" eventType="touchUpInside" id="pDD-CX-uwB"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygn-XX-eMB">
                                             <rect key="frame" x="327" y="264" width="67" height="30"/>
@@ -185,6 +188,15 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="acceptButton" destination="15W-yx-JPj" id="OVA-Ai-n2n"/>
+                                    <outlet property="dateTimeLabel" destination="aWJ-G3-HTK" id="UNJ-dK-3gI"/>
+                                    <outlet property="descriptionLabel" destination="bmL-uS-HPX" id="yEk-X8-ra5"/>
+                                    <outlet property="infoButton" destination="Ygn-XX-eMB" id="N7b-SM-fQk"/>
+                                    <outlet property="inviterImage" destination="LFP-Zk-SDj" id="eDp-Ns-hNf"/>
+                                    <outlet property="locationLabel" destination="fpO-eu-zOU" id="mF3-D2-R0h"/>
+                                    <outlet property="nameLabel" destination="jkz-tN-TYf" id="Aj9-YN-M4X"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -785,7 +797,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfD-iv-dP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="2308"/>
+            <point key="canvasLocation" x="2183" y="2498"/>
         </scene>
         <!--Create Invite View Controller-->
         <scene sceneID="CuE-bC-wYk">

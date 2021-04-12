@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Parse
 
 class InvitesTableViewController: UITableViewController {
-
+    
+    var invitesDictionary = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +20,20 @@ class InvitesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let query = PFQuery(className: "invites")
+        query.includeKey("userid")
+        query.limit = 20
+        
+        query.findObjectsInBackground { (invites, error) in
+            if invites != nil {
+                self.invitesDictionary = invites!
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -28,13 +45,33 @@ class InvitesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return invitesDictionary.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InvitesTableViewCell", for: indexPath) as! InvitesTableViewCell
-
+        
+        cell.acceptButton.layer.cornerRadius = 5
+        cell.infoButton.layer.cornerRadius = 5
+        
+        
+        let currentInvite = invitesDictionary[indexPath.row]
+        let user = currentInvite["userid"] as! PFUser
+        cell.nameLabel.text = user["firstname"] as! String
+//TODO  cell.inviterImage =
+        cell.descriptionLabel.text = currentInvite["invite_details"] as! String
+        cell.locationLabel.text = currentInvite["location"] as! String
+        
+        
+//        var dateTime = currentInvite["date"] as! String
+//        let day = dateTime.prefix(upTo: dateTime.firstIndex(of: " ")!)
+//        dateTime = String(dateTime.suffix(from: dateTime.firstIndex(of: " ")!))
+//        let month = dateTime.prefix(upTo: dateTime.firstIndex(of: " ")!)
+//        dateTime = String(dateTime.suffix(from: dateTime.firstIndex(of: " ")!))
+        
+        
+//TODO    cell.dateTimeLabel.text = currentInvite["date"] as! Date
+        
         return cell
     }
     
