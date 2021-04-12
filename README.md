@@ -141,6 +141,7 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
    | status | bool | status of invite, active or inactive |
    | invite details | string | users description of invite |
    | date | date date of the meet up |
+   | max_accepts | Maximum number of people who can accept the invite |
 
 
 
