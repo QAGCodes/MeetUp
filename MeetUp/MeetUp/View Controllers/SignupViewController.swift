@@ -24,25 +24,21 @@ class SignupViewController: ViewController {
     @IBAction func signupPressed(_ sender: Any) {
         let firstName = firstnameField.text!
         let lastName = lastnameField.text!
-        let username = usernameField.text!
-        let password = passwordField.text!
+       
         
-        let user = PFObject(className: "users")
-        user["username"] = username
-        user["firstName"] = firstName
-        user["lastName"] = lastName
-        user["password"] = password
-        
-        
-        
-        user.saveInBackground{(success, error) in
+        let user = PFUser()
+        user.username = usernameField.text
+        user.password = passwordField.text
+        user["firstname"] = firstName
+        user["lastname"] = lastName
+        user.signUpInBackground{(success, error) in
             if success {
-                print("Signup successful")
-                //self.performSegue(withIdentifier: "InviteStream", sender: nil)
+                self.performSegue(withIdentifier: "toProfileSegue", sender: nil)
             }else{
                 print("Error: \(error?.localizedDescription)")
             }
         }
+        
     }
     
     /*
