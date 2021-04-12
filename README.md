@@ -28,15 +28,19 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 **Required Must-have Stories**
 - [x] Page for user to Login and signup
 - [x] User can login and Signup with their data being stored in the database
+- [ ] User can view active invites
+- [ ] User can accept invites
+- [ ] User can view who accepted the invite 
 - [x] Page for user to post invites
 - [ ] User can post invites with their data being stored in the database
 - [x] Page for user to create/edit profile
 - [ ] Users can create/edit their profiles with the change reflecting in the database
+- [ ] User can log out
+- [ ] User can delete/verify their accounts
 
 * Users can pick someone who’s already set up an invitation and accept it.
 * Users can set up an invite with a location and idea of where they would like to meet up with people.
 * Each invite will have a page with the meeting location and time.
-* Every user will have a profile with their information.
 
 
 
@@ -141,7 +145,6 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
    | status | bool | status of invite, active or inactive |
    | invite details | string | users description of invite |
    | date | date date of the meet up |
-   | max_accepts | Maximum number of people who can accept the invite |
 
 
 
