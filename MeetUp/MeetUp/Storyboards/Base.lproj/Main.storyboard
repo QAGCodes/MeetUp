@@ -25,7 +25,7 @@
                                     <color key="titleColor" red="0.91372549020000005" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0Vv-LR-RD4" kind="presentation" id="h56-a1-42P"/>
+                                    <segue destination="IC5-z2-n1I" kind="presentation" id="h56-a1-42P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-ex-bYe">
@@ -353,6 +353,13 @@
                         <viewLayoutGuide key="safeArea" id="Dqx-rP-5NO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ghk-gr-Omo">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="TMh-Mu-EaV">
+                            <connections>
+                                <action selector="onBackButtonPressed:" destination="0Vv-LR-RD4" id="TzV-7Z-gKl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="passwordField" destination="HeM-EN-sQQ" id="AS6-fM-Hic"/>
                         <outlet property="usernameField" destination="ABG-Za-M80" id="H15-yN-wWb"/>
@@ -361,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO2-0S-m5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.6956521739131" y="81.696428571428569"/>
+            <point key="canvasLocation" x="1918.840579710145" y="81.696428571428569"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zgX-MI-cj8">
@@ -854,6 +861,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsu-BN-sMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2102.898550724638" y="872.54464285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uUB-G4-HZy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="IC5-z2-n1I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IXM-sV-1oR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Vv-LR-RD4" kind="relationship" relationship="rootViewController" id="n1n-B9-z01"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZv-l8-fdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.6956521739131" y="81.696428571428569"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

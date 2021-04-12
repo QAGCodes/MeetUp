@@ -24,7 +24,10 @@ class LoginViewController: ViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onBackButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func loginPressed(_ sender: Any) {
         let username = usernameField.text!
         let password = passwordField.text!
