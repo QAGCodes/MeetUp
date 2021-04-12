@@ -102,6 +102,7 @@
                         <outlet property="lastnameField" destination="tqI-NT-ST7" id="avq-R4-rDx"/>
                         <outlet property="passwordField" destination="Ayv-bb-cMQ" id="TWf-sA-rYW"/>
                         <outlet property="usernameField" destination="aaw-Ph-7fv" id="h9H-Ch-lTz"/>
+                        <segue destination="2Fh-dj-QKt" kind="presentation" identifier="toProfileSegue" id="Suf-fy-DE4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNY-LY-XiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -472,7 +473,7 @@
             <objects>
                 <viewController storyboardIdentifier="UserProfileViewController" id="2Fh-dj-QKt" customClass="UserProfileViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zip-ct-eoj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="e431ac45dab9d01f199086adf12836e8" translatesAutoresizingMaskIntoConstraints="NO" id="JeQ-YS-LhO">
@@ -515,6 +516,9 @@
                                 <state key="normal" title="Create Invite">
                                     <color key="titleColor" red="0.92156862750000001" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ZKc-MV-BoD" kind="presentation" id="gX8-EY-LGI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2o-EB-Auj">
                                 <rect key="frame" x="153" y="702" width="108" height="30"/>
@@ -776,7 +780,44 @@
             </objects>
             <point key="canvasLocation" x="1888" y="2308"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="CuE-bC-wYk">
+            <objects>
+                <viewController id="CIc-kq-d36" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BGk-fC-hN0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uCR-zk-jRI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="10m-6z-W0s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqj-8w-AcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3013.04347826087" y="872.54464285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LiO-ql-TmN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ZKc-MV-BoD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h9k-OG-enH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CIc-kq-d36" kind="relationship" relationship="rootViewController" id="Yv9-pu-5Cp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsu-BN-sMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102.898550724638" y="872.54464285714278"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Suf-fy-DE4"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left.2.fill" catalog="system" width="128" height="86"/>
         <image name="e431ac45dab9d01f199086adf12836e8" width="658" height="1024"/>
