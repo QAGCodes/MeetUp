@@ -16,7 +16,7 @@ class LoginViewController: ViewController {
     var User = [PFObject]()
     var success = false
     //Name of segue to invite stream
-    var loginSegueToStream = ""
+    var loginSegueToStream = "loginToInviteStream"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class LoginViewController: ViewController {
                     if(self.success == true){
                         if(user["password"] as! String == password){
                             print("Login Successful")
-                           // self.performSegue(withIdentifier: self.loginSegueToStream, sender: self)
+                            self.performSegue(withIdentifier: self.loginSegueToStream, sender: self)
                         }else{
                             self.errorLoggingIn(text: "Invalid Password")
                             self.success = false
