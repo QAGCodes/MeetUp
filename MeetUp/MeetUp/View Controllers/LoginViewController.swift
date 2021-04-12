@@ -28,37 +28,14 @@ class LoginViewController: ViewController {
     @IBAction func loginPressed(_ sender: Any) {
         let username = usernameField.text!
         let password = passwordField.text!
-    
-        let query = PFQuery(className:"users")
-        query.includeKeys(["username","password"])
-        
-        query.findObjectsInBackground{(users, error) in
-            if users != nil{
-                self.User = users!
-                for user in self.User {
-                    if(user["username"] as! String == username){
-                        self.success = true
-                    }else{
-                        continue
-                    }
-                    
-                    if(self.success == true){
-                        if(user["password"] as! String == password){
-                            print("Login Successful")
-                            self.performSegue(withIdentifier: self.loginSegueToStream, sender: self)
-                        }else{
-                            self.errorLoggingIn(text: "Invalid Password")
-                            self.success = false
-                        }
-                    }
-                }
-                
-                if self.success == false {
-                    self.errorLoggingIn(text: "Username doesn't exist")
-                }
+        PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+            if(user != nil){
+                self.performSegue(withIdentifier: self.loginSegueToStream, sender: nil)
+            }else{
+                self.errorLoggingIn(text: "Username/Password is Incorrect!")
+                print("Error: \(error?.localizedDescription)")
             }
         }
-        
        
     }
         

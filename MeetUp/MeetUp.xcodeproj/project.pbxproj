@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001B826E2623E4A7004E6DBF /* CreateInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B826D2623E4A7004E6DBF /* CreateInviteViewController.swift */; };
 		00E170AA261E9FED0082E159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E170A9261E9FED0082E159 /* AppDelegate.swift */; };
 		00E170AC261E9FED0082E159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E170AB261E9FED0082E159 /* SceneDelegate.swift */; };
 		00E170AE261E9FED0082E159 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E170AD261E9FED0082E159 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001B826D2623E4A7004E6DBF /* CreateInviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInviteViewController.swift; sourceTree = "<group>"; };
 		00E170A6261E9FED0082E159 /* MeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E170A9261E9FED0082E159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E170AB261E9FED0082E159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				5ACA6B6526223B35004538F3 /* UserProfileViewController.swift */,
 				5ACA6B6A26223EF5004538F3 /* EditProfileViewController.swift */,
 				5ACA6B6F2622401A004538F3 /* PreviousInvitesViewController.swift */,
+				001B826D2623E4A7004E6DBF /* CreateInviteViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				7BBD8E10261F791C00D49681 /* InvitesTableViewCell.swift in Sources */,
 				5ACA6B7D26224071004538F3 /* PreviousInviteCell.swift in Sources */,
 				00E170AC261E9FED0082E159 /* SceneDelegate.swift in Sources */,
+				001B826E2623E4A7004E6DBF /* CreateInviteViewController.swift in Sources */,
 				5ACA6B6B26223EF5004538F3 /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

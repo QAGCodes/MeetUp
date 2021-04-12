@@ -780,17 +780,58 @@
             </objects>
             <point key="canvasLocation" x="1888" y="2308"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Invite View Controller-->
         <scene sceneID="CuE-bC-wYk">
             <objects>
-                <viewController id="CIc-kq-d36" sceneMemberID="viewController">
+                <viewController id="CIc-kq-d36" customClass="CreateInviteViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BGk-fC-hN0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAK-HM-PGY">
+                                <rect key="frame" x="20" y="141" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ohp-MT-jNF">
+                                <rect key="frame" x="20" y="231" width="374" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date &amp; Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-Ta-bKO">
+                                <rect key="frame" x="20" y="194" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" placeholder="Notes/Invite Details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HgT-C3-3rZ">
+                                <rect key="frame" x="20" y="428" width="374" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uCR-zk-jRI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="10m-6z-W0s"/>
+                    <navigationItem key="navigationItem" id="10m-6z-W0s">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wKC-zc-FYD">
+                            <connections>
+                                <action selector="onCancelButton:" destination="CIc-kq-d36" id="TPZ-8l-B5X"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="Y3Z-Hs-Qlv">
+                            <connections>
+                                <action selector="onPostButton:" destination="CIc-kq-d36" id="MyI-Kt-UKn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateTimePicker" destination="Ohp-MT-jNF" id="kiI-tS-F4f"/>
+                        <outlet property="locationTextField" destination="QAK-HM-PGY" id="ejd-ND-QAq"/>
+                        <outlet property="notesTextField" destination="HgT-C3-3rZ" id="w3G-if-mSB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqj-8w-AcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
