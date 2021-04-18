@@ -1,17 +1,14 @@
 //
-//  InvitesTableViewController.swift
+//  SettingsTableViewController.swift
 //  MeetUp
 //
-//  Created by csuser on 4/8/21.
+//  Created by csuser on 4/18/21.
 //
 
 import UIKit
-import Parse
 
-class InvitesTableViewController: UITableViewController {
-    
-    var invitesDictionary = [PFObject]()
-    
+class SettingsTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,66 +19,30 @@ class InvitesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let query = PFQuery(className: "invites")
-        query.includeKey("userid")
-        query.limit = 20
-        
-        query.findObjectsInBackground { (invites, error) in
-            if invites != nil {
-                self.invitesDictionary = invites!
-                self.tableView.reloadData()
-            }
-        }
-    }
 
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return invitesDictionary.count
+        return 0
     }
     
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "InvitesTableViewCell", for: indexPath) as! InvitesTableViewCell
-        
-        cell.acceptButton.layer.cornerRadius = 5
-        cell.infoButton.layer.cornerRadius = 5
-        
-        
-        let currentInvite = invitesDictionary[indexPath.row]
-        let user = currentInvite["userid"] as! PFUser
-        cell.nameLabel.text = user["firstname"] as! String
-//TODO  cell.inviterImage =
-        cell.descriptionLabel.text = currentInvite["invite_details"] as! String
-        cell.locationLabel.text = currentInvite["location"] as! String
-        
-        let inviteDate = currentInvite["date"] as! Date
-        
-        let formatter3 = DateFormatter()
-        formatter3.dateFormat = "E, MMM d, h:mm a"
-        cell.dateTimeLabel.text = formatter3.string(from: inviteDate)
-        
-        
-        
-//        var dateTime = currentInvite["date"] as! String
-//        let day = dateTime.prefix(upTo: dateTime.firstIndex(of: " ")!)
-//        dateTime = String(dateTime.suffix(from: dateTime.firstIndex(of: " ")!))
-//        let month = dateTime.prefix(upTo: dateTime.firstIndex(of: " ")!)
-//        dateTime = String(dateTime.suffix(from: dateTime.firstIndex(of: " ")!))
-        
-        
-//TODO    cell.dateTimeLabel.text = currentInvite["date"] as! Date
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -118,21 +79,14 @@ class InvitesTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let invite = invitesDictionary[indexPath.row]
-        
-        let invitesDetailsViewController = segue.destination as! InviteDetailsViewController
-        
-        invitesDetailsViewController.invite = invite
-        
-        
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }
