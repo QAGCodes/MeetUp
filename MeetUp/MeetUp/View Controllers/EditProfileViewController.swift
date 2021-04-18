@@ -16,6 +16,8 @@ class EditProfileViewController: UIViewController {
     @IBOutlet var majorField: UITextField!
     @IBOutlet var bioField: UITextField!
     @IBOutlet var interestsField: UITextField!
+    @IBOutlet weak var profilePictureField: UIImageView!
+    
     
     let user = PFUser.current()
     
@@ -38,13 +40,9 @@ class EditProfileViewController: UIViewController {
         
     }
     
-    func updateProfile() {
-        
-    }
-    
     @IBAction func saveButton(_ sender: UIButton) {
         let query = PFQuery(className: "Profile")
-        query.whereKey("user", equalTo: user)
+        query.whereKey("user", equalTo: user as Any)
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
                 // Log details of the failure
@@ -116,8 +114,12 @@ class EditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profilePictureField.layer.masksToBounds = false
+        profilePictureField.layer.cornerRadius = profilePictureField.frame.height/2
+            profilePictureField.clipsToBounds = true
+        
         let query = PFQuery(className: "Profile")
-        query.whereKey("user", equalTo: user)
+        query.whereKey("user", equalTo: user as Any)
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
                 // Log details of the failure
@@ -141,16 +143,4 @@ class EditProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
