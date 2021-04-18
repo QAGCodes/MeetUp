@@ -72,42 +72,7 @@ class EditProfileViewController: UIViewController {
                 }
             }
         }
-        
-        
-        
-//        let profile = PFObject(className: "Profile")
-//        profile["fullname"] = fullNameField.text
-//        profile["dispname"] = dispNameField.text
-//        profile["college"] = collegeField.text
-//        profile["major"] = majorField.text
-//        profile["bio"] = bioField.text
-//        profile["interests"] = interestsField.text
-//        profile["user"] = user
-//        profile.saveInBackground { (succeeded, error) in
-//            if succeeded {
-//                print("Object has been saved")
-//            } else {
-//                print("There was an error while saving object")
-//            }
-//        }
-        
-//        let query = PFQuery(className:"Profile")
-//        query.whereKey("user", equalTo: user)
-//        query.findObjectsInBackground { (profiles: [PFObject]?, error: Error?) in
-//            if let error = error {
-//                // Log details of the failure
-//                print(error.localizedDescription)
-//            } else if let profiles = profiles {
-//                // The find succeeded.
-//                print("Successfully retrieved \(profiles.count)")
-//                if profiles.count == 0 {
-//
-//                }
-//                // Do something with the found objects
-//
-//            }
 
-        
         self.dismiss(animated: true) {
         }
     }
