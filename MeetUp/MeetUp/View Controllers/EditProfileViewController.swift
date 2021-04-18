@@ -38,6 +38,10 @@ class EditProfileViewController: UIViewController {
         
     }
     
+    func updateProfile() {
+        
+    }
+    
     @IBAction func saveButton(_ sender: UIButton) {
         let query = PFQuery(className: "Profile")
         query.whereKey("user", equalTo: user)
@@ -51,6 +55,22 @@ class EditProfileViewController: UIViewController {
                 // Do something with the found objects
                 if objects.count == 0 {
                     self.newProfile()
+                } else {
+                    let profile = objects[0]
+                    profile["fullname"] = self.fullNameField.text
+                    profile["dispname"] = self.dispNameField.text
+                    profile["college"] = self.collegeField.text
+                    profile["major"] = self.majorField.text
+                    profile["bio"] = self.bioField.text
+                    profile["interests"] = self.interestsField.text
+                    profile["user"] = self.user
+                    profile.saveInBackground { (succeeded, error) in
+                        if succeeded {
+                            print("Object has been saved")
+                        } else {
+                            print("There was an error while saving object")
+                        }
+                    }
                 }
             }
         }
