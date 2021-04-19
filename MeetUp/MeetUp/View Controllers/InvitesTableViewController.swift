@@ -11,6 +11,8 @@ import Parse
 class InvitesTableViewController: UITableViewController {
     
     var invitesDictionary = [PFObject]()
+    var currentProfile: PFObject!
+    var currentInvite: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,16 +70,29 @@ class InvitesTableViewController: UITableViewController {
         formatter3.dateFormat = "E, MMM d, h:mm a"
         cell.dateTimeLabel.text = formatter3.string(from: inviteDate)
         
+        let match = user.objectId as! String
+        //print("\(match)")
+        let query = PFQuery(className: "Profile")
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                // The find succeeded.
+                //print("Successfully retrieved \(objects.count) profiles.")
+                
+                for object in objects {
+                    let user = object["user"] as! PFUser
+                    if (user.objectId == match) {
+                        self.currentProfile = object
+                    }
+                }
+                
+                
+                // Do something with the found objects
+            }
+        }
         
-        
-//        var dateTime = currentInvite["date"] as! String
-//        let day = dateTime.prefix(upTo: dateTime.firstIndex(of: " ")!)
-//        dateTime = String(dateTime.suffix(from: dateTime.firstIndex(of: " ")!))
-//        let month = dateTime.prefix(upTo: dateTime.firstIndex(of: " ")!)
-//        dateTime = String(dateTime.suffix(from: dateTime.firstIndex(of: " ")!))
-        
-        
-//TODO    cell.dateTimeLabel.text = currentInvite["date"] as! Date
         
         return cell
     }
@@ -117,12 +132,28 @@ class InvitesTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(indexPath.row)")
+    }
 
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sender = sender as! UIButton
+        guard let cell = sender.superview?.superview as? InvitesTableViewCell else {
+            return // or fatalError() or whatever
+        }
+
+        let indexPath = tableView.indexPath(for: cell)
+        let invite = invitesDictionary[indexPath!.row]
+        
+        let invitesDetailsViewController = segue.destination as! InviteDetailsViewController
+        
+        invitesDetailsViewController.invite = invite
+        invitesDetailsViewController.profile = currentProfile
         
         if segue.identifier == "inviteDetailsSegue"{
             if let indexPath = self.tableView.indexPathForSelectedRow {
