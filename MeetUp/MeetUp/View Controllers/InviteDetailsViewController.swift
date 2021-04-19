@@ -11,6 +11,7 @@ import Parse
 class InviteDetailsViewController: UIViewController {
     
     var invite: PFObject!
+    var profile: PFObject!
 
     @IBOutlet weak var inviterImage: UIImageView!
     @IBOutlet weak var inviteDescription: UILabel!
@@ -31,10 +32,10 @@ class InviteDetailsViewController: UIViewController {
         inviteDescription.text = invite["invite_details"] as! String
         let user = invite["userid"] as! PFUser
         inviterName.text = user["firstname"] as! String
-        //inviterUniversity.text =
-        //inviterStandingAndMajor.text =
-        //inviterBio.text =
-        //firstInterest.text = 
+        inviterUniversity.text = profile["college"] as! String
+        inviterStandingAndMajor.text = profile["major"] as! String
+        inviterBio.text = profile["bio"] as! String
+        firstInterest.text = profile["interests"] as! String
 
 
         // Do any additional setup after loading the view.
