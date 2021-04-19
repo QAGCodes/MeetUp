@@ -61,7 +61,7 @@ class InvitesTableViewController: UITableViewController {
 //TODO  cell.inviterImage =
         cell.descriptionLabel.text = currentInvite["invite_details"] as! String
         cell.locationLabel.text = currentInvite["location"] as! String
-        
+        cell.objectId = currentInvite.objectId ?? ""
         let inviteDate = currentInvite["date"] as! Date
         
         let formatter3 = DateFormatter()
@@ -123,14 +123,15 @@ class InvitesTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let invite = invitesDictionary[indexPath.row]
         
-        let invitesDetailsViewController = segue.destination as! InviteDetailsViewController
-        
-        invitesDetailsViewController.invite = invite
-        
+        if segue.identifier == "inviteDetailsSegue"{
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let invite = invitesDictionary[indexPath.row]
+                let invitesDetailsViewController = segue.destination as! InviteDetailsViewController
+                print(invite.objectId)
+                invitesDetailsViewController.inviteId = invite.objectId ?? ""
+            }
+        }
         
     }
     

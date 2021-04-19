@@ -1,24 +1,19 @@
 //
-//  PreviousInvitesViewController.swift
+//  ActiveInvitesTableViewController.swift
 //  MeetUp
 //
-//  Created by Ayushman Singh on 4/3/21.
+//  Created by Vipata Kilembo on 4/18/21.
 //
 
 import UIKit
 import Parse
 
+class ActiveInvitesTableViewController: UITableViewController {
 
-
-class PreviousInvitesViewController:  UITableViewController  {
-    
     var invitesDictionary = [PFObject]()
-    var invite : PFObject!
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //performSegue(withIdentifier: "editPreviousInactiveSegue", sender: indexPath)
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousInviteCell") as! PreviousInviteCell
         
         let currentInvite = invitesDictionary[indexPath.row]
@@ -36,14 +31,7 @@ class PreviousInvitesViewController:  UITableViewController  {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "editPreviousInactiveSegue", sender: self)
-    }
-    
-    @IBAction func onEditButton(_ sender: Any) {
-       // self.performSegue(withIdentifier: "editPreviousInactiveSegue", sender: Any?)
-    }
-    
+ 
     @IBOutlet var previousInvitesTable: UITableView!
     
     override func viewDidLoad() {
@@ -53,7 +41,7 @@ class PreviousInvitesViewController:  UITableViewController  {
         let query = PFQuery(className: "invites")
         
         query.whereKey("userid", equalTo:PFUser.current()!)
-        query.whereKey("status", equalTo: true)
+        query.whereKey("status", equalTo: false)
         query.limit = 20
         
         query.findObjectsInBackground { (invites, error) in
@@ -74,17 +62,19 @@ class PreviousInvitesViewController:  UITableViewController  {
         return invitesDictionary.count
     }
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "editPreviousActiveSegue", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "editPreviousInactiveSegue"{
+        if segue.identifier == "editPreviousActiveSegue"{
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let invite = invitesDictionary[indexPath.row]
                 let editInviteViewController = segue.destination as! EditInviteViewController
                 editInviteViewController.invite = invite
             }
         }
-        
     }
 
     /*

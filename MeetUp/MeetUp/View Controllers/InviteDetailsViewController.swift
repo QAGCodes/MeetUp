@@ -20,15 +20,15 @@ class InviteDetailsViewController: UIViewController {
     @IBOutlet weak var inviterBio: UILabel!
     @IBOutlet weak var firstInterest: UILabel!
     
-    
-    
+    var userid : String = ""
+    var inviteId : String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //inviterImage.image =
-        inviteDescription.text = invite["invite_details"] as! String
+        print(self.invite["invite_details"] as! String)
         let user = invite["userid"] as! PFUser
         inviterName.text = user["firstname"] as! String
         //inviterUniversity.text =

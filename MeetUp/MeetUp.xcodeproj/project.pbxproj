@@ -18,6 +18,8 @@
 		00E170CC261E9FF20082E159 /* MeetUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E170CB261E9FF20082E159 /* MeetUpUITests.swift */; };
 		00E170E0261EA2F20082E159 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E170DF261EA2F20082E159 /* LoginViewController.swift */; };
 		00E170E5261EA30C0082E159 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E170E4261EA30C0082E159 /* SignupViewController.swift */; };
+		00E3312C262D21F000978E70 /* ActiveInvitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3312B262D21F000978E70 /* ActiveInvitesTableViewController.swift */; };
+		00E33131262D25BD00978E70 /* EditInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E33130262D25BC00978E70 /* EditInviteViewController.swift */; };
 		5ACA6B6626223B35004538F3 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA6B6526223B35004538F3 /* UserProfileViewController.swift */; };
 		5ACA6B6B26223EF5004538F3 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA6B6A26223EF5004538F3 /* EditProfileViewController.swift */; };
 		5ACA6B702622401A004538F3 /* PreviousInvitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA6B6F2622401A004538F3 /* PreviousInvitesViewController.swift */; };
@@ -66,6 +68,8 @@
 		00E170CD261E9FF20082E159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E170DF261EA2F20082E159 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		00E170E4261EA30C0082E159 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		00E3312B262D21F000978E70 /* ActiveInvitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveInvitesTableViewController.swift; sourceTree = "<group>"; };
+		00E33130262D25BC00978E70 /* EditInviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInviteViewController.swift; sourceTree = "<group>"; };
 		0FF321431C598E0BAA287FF5 /* Pods-MeetUp-MeetUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetUp-MeetUpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeetUp-MeetUpUITests/Pods-MeetUp-MeetUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CA3FC90FCD0B4077E6A8418 /* Pods-MeetUp-MeetUpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetUp-MeetUpUITests.release.xcconfig"; path = "Target Support Files/Pods-MeetUp-MeetUpUITests/Pods-MeetUp-MeetUpUITests.release.xcconfig"; sourceTree = "<group>"; };
 		53D96CD92BD7FED3EEB6B4A6 /* Pods-MeetUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MeetUpTests/Pods-MeetUpTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				001B826D2623E4A7004E6DBF /* CreateInviteViewController.swift */,
 				7B7AD11E262C1E2000D17A37 /* SettingsTableViewController.swift */,
 				7B7AD123262C1F2200D17A37 /* InviteDetailsViewController.swift */,
+				00E3312B262D21F000978E70 /* ActiveInvitesTableViewController.swift */,
+				00E33130262D25BC00978E70 /* EditInviteViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ACA6B702622401A004538F3 /* PreviousInvitesViewController.swift in Sources */,
+				00E3312C262D21F000978E70 /* ActiveInvitesTableViewController.swift in Sources */,
 				7B7AD11F262C1E2000D17A37 /* SettingsTableViewController.swift in Sources */,
 				7BBD8E0B261F78EC00D49681 /* InvitesTableViewController.swift in Sources */,
 				5ACA6B6626223B35004538F3 /* UserProfileViewController.swift in Sources */,
@@ -483,6 +490,7 @@
 				5ACA6B7D26224071004538F3 /* PreviousInviteCell.swift in Sources */,
 				7B7AD124262C1F2200D17A37 /* InviteDetailsViewController.swift in Sources */,
 				00E170AC261E9FED0082E159 /* SceneDelegate.swift in Sources */,
+				00E33131262D25BD00978E70 /* EditInviteViewController.swift in Sources */,
 				001B826E2623E4A7004E6DBF /* CreateInviteViewController.swift in Sources */,
 				5ACA6B6B26223EF5004538F3 /* EditProfileViewController.swift in Sources */,
 			);
