@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0535159C-070B-44E9-8FF7-FC5F19EA409B"
+            uuid = "64EF431F-F6A8-4DA8-BB21-CEB87D1866AE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MeetUp/View Controllers/InvitesTableViewController.swift"
+            filePath = "MeetUp/View Controllers/SettingsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "deleteProfileAndInvites(desiredUser:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

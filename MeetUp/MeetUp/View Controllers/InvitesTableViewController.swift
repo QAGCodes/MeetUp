@@ -153,7 +153,7 @@ class InvitesTableViewController: UITableViewController {
         let invitesDetailsViewController = segue.destination as! InviteDetailsViewController
         
         invitesDetailsViewController.invite = invite
-       // invitesDetailsViewController.profile = currentProfile
+        invitesDetailsViewController.profile = currentProfile
         
         
     }
