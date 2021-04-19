@@ -179,4 +179,5 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
 We are already done with designing most of the screens. By this monday, we will have finished them all and we will be moving to work on the code and integrating the different parts to work together as intended.
 ![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/ezgif.com-video-to-gif-3.gif)
 ![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/ezgif.com-video-to-gif-4.gif)
+
 ![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/sprint3.gif)
