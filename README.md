@@ -27,17 +27,16 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 
 **Required Must-have Stories**
 - [x] Page for user to Login and signup
-- [ ] User can view active invites
-- [ ] User can accept invites
+- [x] User can view active invites
+- [x] User can accept invites
 - [ ] User can view who accepted the invite
-- [ ] User can select who to meet up with from those who accepted
-- [ ] User is requested access to notifications
+- [x] User is requested access to notifications
 - [ ] User is requested access to location
 - [ ] User is requested access to camera roll 
 - [x] Page for user to post invites
-- [ ] User can post invites with their data being stored in the database
+- [x] User can post invites with their data being stored in the database
 - [x] Page for user to create/edit profile
-- [ ] Users can create/edit their profiles with the change reflecting in the database
+- [x] Users can create/edit their profiles with the change reflecting in the database
 - [ ] User can log out
 - [ ] User can delete/verify their accounts
 
@@ -180,3 +179,4 @@ Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9U
 We are already done with designing most of the screens. By this monday, we will have finished them all and we will be moving to work on the code and integrating the different parts to work together as intended.
 ![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/ezgif.com-video-to-gif-3.gif)
 ![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/ezgif.com-video-to-gif-4.gif)
+![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/sprint3.gif)
