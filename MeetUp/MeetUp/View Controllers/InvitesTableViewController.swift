@@ -153,16 +153,8 @@ class InvitesTableViewController: UITableViewController {
         let invitesDetailsViewController = segue.destination as! InviteDetailsViewController
         
         invitesDetailsViewController.invite = invite
-        invitesDetailsViewController.profile = currentProfile
+       // invitesDetailsViewController.profile = currentProfile
         
-        if segue.identifier == "inviteDetailsSegue"{
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let invite = invitesDictionary[indexPath.row]
-                let invitesDetailsViewController = segue.destination as! InviteDetailsViewController
-                print(invite.objectId)
-                invitesDetailsViewController.inviteId = invite.objectId ?? ""
-            }
-        }
         
     }
     
