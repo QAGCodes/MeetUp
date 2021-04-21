@@ -8,14 +8,27 @@
 import UIKit
 import Parse
 
-class CreateInviteViewController: ViewController {
+class CreateInviteViewController: ViewController,UIPickerViewDataSource, UIPickerViewDelegate {
+
+    
 
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var dateTimePicker: UIDatePicker!
     @IBOutlet weak var notesTextField: UITextField!
+    @IBOutlet weak var numberPeoplePicker: UIPickerView!
+    var pickNumbers: [Int]!
+    var acceptedPick : Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.numberPeoplePicker.delegate = self
+        self.numberPeoplePicker.dataSource = self
+        
+        let min = 1
+        let max = 4
+        self.pickNumbers = Array( stride(from:min , to:max+1, by:1))
+        
         // Do any additional setup after loading the view.
     }
     
@@ -28,8 +41,10 @@ class CreateInviteViewController: ViewController {
         let dateAndTime = dateTimePicker.date
         let notes = notesTextField.text!
         
-        let time = dateAndTime.description.components(separatedBy: " ")[1]
+     
         
+        let time = dateAndTime.description.components(separatedBy: " ")[1]
+
         let invite = PFObject(className: "invites")
         invite["location"] = location
         invite["invite_details"] = notes
@@ -37,10 +52,12 @@ class CreateInviteViewController: ViewController {
         invite["time"] = time
         invite["status"] = false
         invite["userid"] = PFUser.current()!
-        
+        invite["accepted"] = self.acceptedPick
+
         invite.saveInBackground{(success, error) in
             if success {
-                self.successPostingInvite(text: "Invite added to Database!")
+                self.performSegue(withIdentifier: "inviteComplete", sender: nil)
+//                self.successPostingInvite(text: "Invite added to Database!")
                 print("saved!")
             }else{
                 print("error!")
@@ -68,5 +85,21 @@ class CreateInviteViewController: ViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickNumbers.count
+    }
+  
+   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+       return "\(pickNumbers[row])"
+   }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.acceptedPick = self.pickNumbers[row]
+    }
 
 }
