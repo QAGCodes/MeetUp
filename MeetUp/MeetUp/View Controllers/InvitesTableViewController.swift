@@ -88,7 +88,6 @@ class InvitesTableViewController: UITableViewController {
                     }
                 }
                 
-                
                 // Do something with the found objects
             }
         }
@@ -154,7 +153,6 @@ class InvitesTableViewController: UITableViewController {
         
         invitesDetailsViewController.invite = invite
         invitesDetailsViewController.profile = currentProfile
-        
         
     }
     

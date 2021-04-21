@@ -33,6 +33,7 @@ class InvitesTableViewCell: UITableViewCell {
                 print(error.localizedDescription)
             } else if let invite = invite{
                 invite["status"] = true
+                
                 invite.saveInBackground()
                 print("success")
             }

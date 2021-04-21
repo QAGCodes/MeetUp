@@ -25,7 +25,7 @@ class PreviousInvitesViewController:  UITableViewController  {
         
         cell.notesLabel.text = currentInvite["invite_details"] as! String
         
-        cell.acceptedLabel.text = "2"
+        cell.acceptedLabel.text = String(currentInvite["accepted"] as! Int)
         let inviteDate = currentInvite["date"] as! Date
         
         let formatter3 = DateFormatter()
@@ -50,13 +50,16 @@ class PreviousInvitesViewController:  UITableViewController  {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         self.tableView.rowHeight = 200
-        let query = PFQuery(className: "invites")
+        let userQuery = PFQuery(className: "invites")
+        let statusQuery = PFQuery(className: "invites")
         
-        query.whereKey("userid", equalTo:PFUser.current()!)
-        query.whereKey("status", equalTo: true)
+        userQuery.whereKey("userid", equalTo:PFUser.current()!)
+        statusQuery.whereKey("status", equalTo: true)
+        
+        let query = PFQuery.orQuery(withSubqueries: [userQuery, statusQuery])
         query.limit = 20
         
-        query.findObjectsInBackground { (invites, error) in
+        query.findObjectsInBackground { (invites: [PFObject]?, error: Error?) in
             if invites != nil {
                 self.invitesDictionary = invites!
                 self.tableView.reloadData()

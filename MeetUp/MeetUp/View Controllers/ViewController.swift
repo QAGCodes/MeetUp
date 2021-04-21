@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
 //            }
         // Enable or disable features based on the authorization.
         }
+        
     }
 
 

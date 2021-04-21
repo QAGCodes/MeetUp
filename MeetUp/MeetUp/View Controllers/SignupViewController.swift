@@ -42,7 +42,14 @@ class SignupViewController: ViewController {
         
         user.signUpInBackground{(success, error) in
             if success {
-                self.performSegue(withIdentifier: "toProfileSegue", sender: nil)
+                PFUser.logInWithUsername(inBackground: self.usernameField.text!, password: self.passwordField.text!) { (user, error) in
+                    if(user != nil){
+                        self.performSegue(withIdentifier: "toProfileSegue", sender: nil)
+                    }else{
+                        self.errorSigningUp(text:"Error: \(error?.localizedDescription)")
+                        print("Error: \(error?.localizedDescription)")
+                    }
+                }
             }else{
                 self.errorSigningUp(text: "Error: \(error?.localizedDescription)")
                 print("Error: \(error?.localizedDescription)")
@@ -50,6 +57,7 @@ class SignupViewController: ViewController {
         }
         
     }
+    
     
     /*
     // MARK: - Navigation
