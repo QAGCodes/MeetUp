@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00049CF8262FBF4E007DB868 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00049CF7262FBF4E007DB868 /* CreateProfileViewController.swift */; };
 		001B826E2623E4A7004E6DBF /* CreateInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B826D2623E4A7004E6DBF /* CreateInviteViewController.swift */; };
 		00E170AA261E9FED0082E159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E170A9261E9FED0082E159 /* AppDelegate.swift */; };
 		00E170AC261E9FED0082E159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E170AB261E9FED0082E159 /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00049CF7262FBF4E007DB868 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		001B826D2623E4A7004E6DBF /* CreateInviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInviteViewController.swift; sourceTree = "<group>"; };
 		00E170A6261E9FED0082E159 /* MeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E170A9261E9FED0082E159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				7B7AD123262C1F2200D17A37 /* InviteDetailsViewController.swift */,
 				00E3312B262D21F000978E70 /* ActiveInvitesTableViewController.swift */,
 				00E33130262D25BC00978E70 /* EditInviteViewController.swift */,
+				00049CF7262FBF4E007DB868 /* CreateProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				7B7AD124262C1F2200D17A37 /* InviteDetailsViewController.swift in Sources */,
 				00E170AC261E9FED0082E159 /* SceneDelegate.swift in Sources */,
 				00E33131262D25BD00978E70 /* EditInviteViewController.swift in Sources */,
+				00049CF8262FBF4E007DB868 /* CreateProfileViewController.swift in Sources */,
 				001B826E2623E4A7004E6DBF /* CreateInviteViewController.swift in Sources */,
 				5ACA6B6B26223EF5004538F3 /* EditProfileViewController.swift in Sources */,
 			);

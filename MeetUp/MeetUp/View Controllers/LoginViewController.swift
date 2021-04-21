@@ -35,7 +35,7 @@ class LoginViewController: ViewController {
             if(user != nil){
                 self.performSegue(withIdentifier: self.loginSegueToStream, sender: nil)
             }else{
-                self.errorLoggingIn(text: "Username/Password is Incorrect!")
+                self.errorLoggingIn(text:"Error: \(error?.localizedDescription)")
                 print("Error: \(error?.localizedDescription)")
             }
         }
