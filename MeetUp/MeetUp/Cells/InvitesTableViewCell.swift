@@ -28,14 +28,36 @@ class InvitesTableViewCell: UITableViewCell {
     }
     @IBAction func onAcceptButton(_ sender: Any) {
         let query = PFQuery(className: "invites")
-        query.getObjectInBackground(withId: self.objectId){(invite:PFObject?, error:Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let invite = invite{
-                invite["status"] = true
-                
-                invite.saveInBackground()
-                print("success")
+        if(self.acceptButton.currentTitle == "Accept"){
+            print("accepting")
+            query.getObjectInBackground(withId: self.objectId){(invite:PFObject?, error:Error?) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let invite = invite{
+                    var current = invite["accepted"] as! Int
+                    current+=1
+                    invite["status"] = true
+                    invite["accepted"] = current
+                    invite.saveInBackground()
+                    print("success")
+                    self.acceptButton.setTitle("Cancel", for: .normal)
+                }
+            }
+        }
+        else if(self.acceptButton.currentTitle == "Cancel"){
+            print("canceling")
+            query.getObjectInBackground(withId: self.objectId){(invite:PFObject?, error:Error?) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let invite = invite{
+                    var current = invite["accepted"] as! Int
+                    current-=1
+                    invite["status"] = false
+                    invite["accepted"] = current
+                    invite.saveInBackground()
+                    print("success")
+                    self.acceptButton.setTitle("Accept", for: .normal)
+                }
             }
         }
     }

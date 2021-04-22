@@ -39,14 +39,23 @@ class ActiveInvitesTableViewController: UITableViewController {
         self.tableView.tableFooterView = UIView()
         self.tableView.rowHeight = 200
         let query = PFQuery(className: "invites")
-        
-        query.whereKey("userid", equalTo:PFUser.current()!)
-        query.whereKey("status", equalTo: false)
+        query.includeKey("userid")
         query.limit = 20
         
         query.findObjectsInBackground { (invites, error) in
             if invites != nil {
                 self.invitesDictionary = invites!
+                for invite in self.invitesDictionary{
+                    var i : Int
+                    i = 0
+                    let status = invite["status"] as! Bool
+                    let user = invite["userid"] as! PFUser
+                    if(status == false && PFUser.current() != user){
+                        self.invitesDictionary.remove(at: i)
+                    }
+                    i+=1
+                }
+                print(self.invitesDictionary.count)
                 self.tableView.reloadData()
             }
         }
