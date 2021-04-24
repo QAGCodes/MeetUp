@@ -56,6 +56,7 @@ class CreateInviteViewController: ViewController,UIPickerViewDataSource, UIPicke
 
         invite.saveInBackground{(success, error) in
             if success {
+                self.scheduleLocalNotification()
                 self.performSegue(withIdentifier: "inviteComplete", sender: nil)
 //                self.successPostingInvite(text: "Invite added to Database!")
                 print("saved!")
@@ -100,6 +101,35 @@ class CreateInviteViewController: ViewController,UIPickerViewDataSource, UIPicke
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.acceptedPick = self.pickNumbers[row]
+    }
+    
+    func scheduleLocalNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Don't forget to check if your invite has been accepted!"
+        content.body = "Click Open to view your invites"
+        content.sound = UNNotificationSound.default
+            
+        // You can use the user info array if you need to include additional information in your local notification.
+        // Then you could use that additional information to perform any kind of action when the notification is opened by the user
+        content.userInfo = ["CustomData": "You will be able to include any kind of information here"]
+        
+        let open = UNNotificationAction(identifier: "open", title: "Open", options: .foreground)
+        
+        let cancel = UNNotificationAction(identifier: "close", title: "Close", options: .destructive)
+        
+        let categories = UNNotificationCategory(identifier: "action", actions: [open,cancel], intentIdentifiers: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([categories])
+        content.categoryIdentifier = "action"
+            
+        let yourDate = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+            
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: yourDate.timeIntervalSinceNow, repeats: false)
+            
+        let request = UNNotificationRequest.init(identifier: "req", content: content, trigger: trigger)
+            
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
     }
 
 }

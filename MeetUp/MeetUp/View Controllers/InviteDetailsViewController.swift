@@ -31,6 +31,7 @@ class InviteDetailsViewController: UIViewController {
         //inviterImage.image =
         print(self.invite["invite_details"] as! String)
         let user = invite["userid"] as! PFUser
+        
         inviterName.text = user["firstname"] as! String
         inviterUniversity.text = profile["college"] as! String
         inviterStandingAndMajor.text = profile["major"] as! String

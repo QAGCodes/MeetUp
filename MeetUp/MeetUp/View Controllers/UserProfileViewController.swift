@@ -20,7 +20,7 @@ class UserProfileViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         
         ProfilePicture.layer.masksToBounds = false
         ProfilePicture.layer.cornerRadius = ProfilePicture.frame.height/2
@@ -51,7 +51,7 @@ class UserProfileViewController: UIViewController {
 //        UniversityName.text = "Purdue University"
 //        BioText.text = "I have a cat and 2 dogs. Marvel beats DC... Embarassing childhood stories are the best kind of stories..."
 //        InterestsText.text = "Interests: \n- Hiking\n- Coffee\n- Fishing\n- Books\n- Food and Cooking"
-        CreateInviteButton.layer.cornerRadius = 5
+            CreateInviteButton.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
     
@@ -65,5 +65,7 @@ class UserProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
+    
 }

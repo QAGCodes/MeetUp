@@ -16,20 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yl-ST-Adw">
-                                <rect key="frame" x="117" y="423" width="180" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.76470588240000004" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.91372549020000005" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="IC5-z2-n1I" kind="presentation" id="h56-a1-42P"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-ex-bYe">
-                                <rect key="frame" x="117" y="500" width="180" height="50"/>
+                                <rect key="frame" x="117" y="491" width="180" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.76470588240000004" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -38,6 +26,20 @@
                                 </state>
                                 <connections>
                                     <segue destination="N4d-kb-o0n" kind="presentation" id="UTJ-0w-TX0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yl-ST-Adw">
+                                <rect key="frame" x="117" y="428" width="180" height="50"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.76470588240000004" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6yl-ST-Adw" secondAttribute="height" multiplier="18:5" id="dBp-6y-d59"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.91372549020000005" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IC5-z2-n1I" kind="presentation" id="h56-a1-42P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1267,6 +1269,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="gX8-EY-LGI"/>
         <segue reference="RLs-V9-Kg0"/>
         <segue reference="Iv2-kV-1Lp"/>
     </inferredMetricsTieBreakers>

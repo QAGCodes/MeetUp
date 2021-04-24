@@ -7,11 +7,12 @@
 
 import UIKit
 import Parse
+import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
 
-
+    let notifCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,12 +23,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://parseapi.back4app.com/"
         }
         
-
-        
         Parse.initialize(with: parseConfig)
+        self.requestAuthForLocalNotifications()
+
         return true
     }
+    
+    func requestAuthForLocalNotifications() {
+        notifCenter.delegate = self
+        notifCenter.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if error != nil {
+                // Something went wrong
+            }
+        }
+    }
 
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(UNNotificationPresentationOptions.init(arrayLiteral: [.alert, .badge]))
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.actionIdentifier ==  "open"{
+            NotificationCenter.default.post(name: NSNotification.Name("Detail"), object: nil)
+        }
+    }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
