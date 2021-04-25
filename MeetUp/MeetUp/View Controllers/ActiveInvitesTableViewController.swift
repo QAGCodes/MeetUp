@@ -11,31 +11,47 @@ import Parse
 class ActiveInvitesTableViewController: UITableViewController {
 
     var invitesDictionary = [PFObject]()
+    var invite : PFObject!
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //performSegue(withIdentifier: "editPreviousInactiveSegue", sender: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousInviteCell") as! PreviousInviteCell
         
         let currentInvite = invitesDictionary[indexPath.row]
-        
-        cell.notesLabel.text = currentInvite["invite_details"] as! String
-        
-        cell.acceptedLabel.text = "2"
-        let inviteDate = currentInvite["date"] as! Date
-        
-        let formatter3 = DateFormatter()
-        formatter3.dateFormat = "E, MMM d, h:mm a"
-        cell.dateTimeLabel.text = formatter3.string(from: inviteDate)
-        cell.locationLabel.text = currentInvite["location"] as! String
-        cell.editButton.layer.cornerRadius = 5
+        let currentuser = currentInvite["userid"] as! PFUser
+        let user = PFUser.current()
+
+        if((currentInvite["status"] != nil) == true){
+            cell.notesLabel.text = currentInvite["invite_details"] as! String
+            
+            cell.acceptedLabel.text = String(currentInvite["accepted"] as! Int)
+            let inviteDate = currentInvite["date"] as! Date
+            
+            let formatter3 = DateFormatter()
+            formatter3.dateFormat = "E, MMM d, h:mm a"
+            cell.dateTimeLabel.text = formatter3.string(from: inviteDate)
+            cell.locationLabel.text = currentInvite["location"] as! String
+            cell.editButton.layer.cornerRadius = 5
+            return cell
+        }
         return cell
     }
     
- 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "editPreviousInactiveSegue", sender: self)
+    }
+    
+    @IBAction func onEditButton(_ sender: Any) {
+       // self.performSegue(withIdentifier: "editPreviousInactiveSegue", sender: Any?)
+    }
+    
     @IBOutlet var previousInvitesTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("in active invites")
         self.tableView.tableFooterView = UIView()
         self.tableView.rowHeight = 200
         let query = PFQuery(className: "invites")
@@ -59,7 +75,9 @@ class ActiveInvitesTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
     }
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -71,21 +89,20 @@ class ActiveInvitesTableViewController: UITableViewController {
         return invitesDictionary.count
     }
     
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "editPreviousActiveSegue", sender: self)
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "editPreviousActiveSegue"{
+        if segue.identifier == "editPreviousInactiveSegue"{
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let invite = invitesDictionary[indexPath.row]
                 let editInviteViewController = segue.destination as! EditInviteViewController
                 editInviteViewController.invite = invite
             }
         }
+        
     }
-
+    
+  
     /*
     // MARK: - Navigation
 
@@ -95,5 +112,6 @@ class ActiveInvitesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+     
 
 }
