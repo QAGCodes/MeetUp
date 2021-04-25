@@ -574,7 +574,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Profile"/>
                                 <connections>
-                                    <segue destination="zqF-Mi-HMp" kind="presentation" id="H3k-hf-X0D"/>
+                                    <segue destination="zqF-Mi-HMp" kind="presentation" modalPresentationStyle="fullScreen" id="H3k-hf-X0D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O26-zm-fYj">
@@ -629,7 +629,7 @@
             <objects>
                 <viewController storyboardIdentifier="EditProfileViewController" id="zqF-Mi-HMp" customClass="EditProfileViewController" customModule="MeetUp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VkK-J7-S7E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name and Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C78-LT-1k4">
@@ -1268,7 +1268,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="h8y-cI-M7e"/>
-        <segue reference="AOs-Fu-avv"/>
+        <segue reference="0S0-7z-shs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left.2.fill" catalog="system" width="128" height="86"/>
