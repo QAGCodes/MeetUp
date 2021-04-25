@@ -23,7 +23,7 @@ class SignupViewController: ViewController {
     
     @IBAction func signupPressed(_ sender: Any) {
         let firstName = firstnameField.text!
-        let lastName = lastnameField.text!
+        let lastName = lastnameField.text!        
        
         
         let user = PFUser()
@@ -31,6 +31,9 @@ class SignupViewController: ViewController {
         user.password = passwordField.text
         user["firstname"] = firstName
         user["lastname"] = lastName
+        
+
+    
         
         if(firstName.count == 0 || lastName.count == 0 || passwordField.text?.count == 0 || usernameField.text?.count == 0){
             self.errorSigningUp(text: "One of the fields is blank!")
