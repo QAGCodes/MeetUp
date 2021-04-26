@@ -29,23 +29,17 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 - [x] Page for user to Login and signup
 - [x] User can view active invites
 - [x] User can accept invites
-- [ ] User can view who accepted the invite
+- [x] User can view who accepted the invite
 - [x] User is requested access to notifications
-- [ ] User is requested access to location
-- [ ] User is requested access to camera roll 
+- [x] User is requested access to camera roll 
 - [x] Page for user to post invites
 - [x] User can post invites with their data being stored in the database
 - [x] Page for user to create/edit profile
 - [x] Users can create/edit their profiles with the change reflecting in the database
 - [x] User can log out
 - [x] User can delete their account
-- [ ] User can verify their account
-
-* Users can pick someone who’s already set up an invitation and accept it.
-* Users can set up an invite with a location and idea of where they would like to meet up with people.
-* Each invite will have a page with the meeting location and time.
-
-
+- [x] User can see app icon
+- [x] User can see a styled launch screen
 
 **Optional Nice-to-have Stories**
 
@@ -106,13 +100,6 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 ## Wireframes
 <img src="MeetUp_Wireframe.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-Link to [Figma Digital WireFrame](https://www.figma.com/file/ydklulrn1jUHDF9UGNPyGD/Meet-Up?node-id=0%3A1)
-
-### [BONUS] Interactive Prototype
-
-Link to the [Interactive Prototype](https://www.figma.com/proto/ydklulrn1jUHDF9UGNPyGD/Meet-Up?node-id=1%3A2&scaling=scale-down)
 
 ## Schema 
 ### Models
