@@ -24,13 +24,39 @@ class InviteDetailsViewController: UIViewController {
     var userid : String = ""
     var inviteId : String = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //inviterImage.image =
         print(self.invite["invite_details"] as! String)
         let user = invite["userid"] as! PFUser
+        
+        let query = PFQuery(className: "Profile")
+        query.whereKey("user", equalTo: user as Any)
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                // The find succeeded.
+                print("Successfully retrieved \(objects.count) profiles.")
+                // Do something with the found objects
+                if objects.count > 0 {
+                    self.inviterName.text = objects[0]["fullname"] as? String
+                    self.inviterUniversity.text = objects[0]["college"] as? String
+                    self.inviterBio.text = objects[0]["bio"] as? String
+                    self.firstInterest.text = objects[0]["interests"] as? String
+                    let imageFile = objects[0]["picture"] as! PFFileObject
+                    let urlString = imageFile.url!
+                    let url = URL(string: urlString)!
+                    self.inviterImage.af_setImage(withURL: url)
+                }
+            }
+        }
+        
+        
+        
         
         inviterName.text = user["firstname"] as! String
         inviterUniversity.text = profile["college"] as! String

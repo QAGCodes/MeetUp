@@ -10,9 +10,9 @@ import Parse
 
 class InvitesTableViewController: UITableViewController {
     
-    var invitesDictionary = [PFObject]()
-    var currentProfile: PFObject!
-    var currentInvite: PFObject!
+    public var invitesDictionary = [PFObject]()
+    public var currentProfile: PFObject!
+    public var currentInvite: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +59,31 @@ class InvitesTableViewController: UITableViewController {
         
         let currentInvite = invitesDictionary[indexPath.row]
         let user = currentInvite["userid"] as! PFUser
+        
+        let inviteQuery = PFQuery(className: "Profile")
+        inviteQuery.whereKey("user", equalTo: user as Any)
+        inviteQuery.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                // The find succeeded.
+                print("Successfully retrieved \(objects.count) profiles.")
+                // Do something with the found objects
+                if objects.count > 0 {
+                    let imageFile = objects[0]["picture"] as! PFFileObject
+                    let urlString = imageFile.url!
+                    let url = URL(string: urlString)!
+                    cell.inviterImage.af_setImage(withURL: url)
+                }
+            }
+        }
+        
         cell.nameLabel.text = user["firstname"] as! String
-//TODO  cell.inviterImage =
+
+        //TODO  cell.inviterImage =
+        
+        
         cell.descriptionLabel.text = currentInvite["invite_details"] as! String
         cell.locationLabel.text = currentInvite["location"] as! String
         cell.objectId = currentInvite.objectId ?? ""
