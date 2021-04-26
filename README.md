@@ -173,5 +173,5 @@ We are already done with designing most of the screens. By this monday, we will 
 
 ![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/sprint3.gif)
 
-Last sprint demonstration
-![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/Screen%20Recording%202021-04-25%20at%2011.32.39%20PM.gif)
+![Last sprint demonstration](https://github.com/MeetUpAppGroup/MeetUp/blob/main/Screen%20Recording%202021-04-25%20at%2011.32.39%20PM.gif)
+
