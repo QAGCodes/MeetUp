@@ -7,8 +7,9 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
-class CreateProfileViewController: ViewController {
+class CreateProfileViewController: ViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var displayNameField: UITextField!
@@ -16,6 +17,7 @@ class CreateProfileViewController: ViewController {
     @IBOutlet weak var majorField: UITextField!
     @IBOutlet weak var bioField: UITextField!
     @IBOutlet weak var interestsField: UITextField!
+    @IBOutlet weak var profilePictureField: UIImageView!
     
     
     override func viewDidLoad() {
@@ -25,8 +27,33 @@ class CreateProfileViewController: ViewController {
         let lastName = user["lastname"] as! String
         fullnameLabel.text = firstName + " " + lastName
         displayNameField.text = user["username"] as! String
+        
     }
     
+    @IBAction func onCameraButton(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        } else {
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+
+        let size = CGSize(width: 186, height: 186)
+        let scaledImage = image.af_imageAspectScaled(toFill: size)
+
+        profilePictureField.image = scaledImage
+        dismiss(animated: true, completion: nil)
+    }
 
     @IBAction func onSaveButton(_ sender: Any) {
         let user = PFUser.current()!
@@ -40,6 +67,9 @@ class CreateProfileViewController: ViewController {
         profile["interests"] = self.interestsField.text!
         profile["major"] = self.majorField.text!
         profile["user"] = user
+        let imageData = self.profilePictureField.image?.pngData()
+        let file = PFFileObject(data: imageData!)
+        profile["picture"] = file
         
         profile.saveInBackground{(success, error) in
             if success {

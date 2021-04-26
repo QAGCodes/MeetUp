@@ -42,6 +42,10 @@ class UserProfileViewController: UIViewController {
                     self.UniversityName.text = objects[0]["college"] as? String
                     self.BioText.text = objects[0]["bio"] as? String
                     self.InterestsText.text = objects[0]["interests"] as? String
+                    let imageFile = objects[0]["picture"] as! PFFileObject
+                    let urlString = imageFile.url!
+                    let url = URL(string: urlString)!
+                    self.ProfilePicture.af_setImage(withURL: url)
                 }
             }
         }

@@ -7,9 +7,10 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
-class EditProfileViewController: UIViewController {
-
+class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//y
     @IBOutlet var fullNameField: UITextField!
     @IBOutlet var dispNameField: UITextField!
     @IBOutlet var collegeField: UITextField!
@@ -30,6 +31,9 @@ class EditProfileViewController: UIViewController {
         profile["bio"] = bioField.text
         profile["interests"] = interestsField.text
         profile["user"] = user
+        let imageData = self.profilePictureField.image?.pngData()
+        let file = PFFileObject(data: imageData!)
+        profile["picture"] = file
         profile.saveInBackground { (succeeded, error) in
             if succeeded {
                 print("Object has been saved")
@@ -38,6 +42,31 @@ class EditProfileViewController: UIViewController {
             }
         }
         
+    }
+    
+    @IBAction func onCameraButton(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        } else {
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+
+        let size = CGSize(width: 186, height: 186)
+        let scaledImage = image.af_imageAspectScaled(toFill: size)
+
+        profilePictureField.image = scaledImage
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
@@ -62,6 +91,9 @@ class EditProfileViewController: UIViewController {
                     profile["bio"] = self.bioField.text
                     profile["interests"] = self.interestsField.text
                     profile["user"] = self.user
+                    let imageData = self.profilePictureField.image?.pngData()
+                    let file = PFFileObject(data: imageData!)
+                    profile["picture"] = file
                     profile.saveInBackground { (succeeded, error) in
                         if succeeded {
                             print("Object has been saved")
@@ -100,6 +132,10 @@ class EditProfileViewController: UIViewController {
                     self.majorField.attributedText = NSAttributedString(string: objects[0]["major"] as! String)
                     self.bioField.attributedText = NSAttributedString(string: objects[0]["bio"] as! String)
                     self.interestsField.attributedText = NSAttributedString(string: objects[0]["interests"] as! String)
+                    let imageFile = objects[0]["picture"] as! PFFileObject
+                    let urlString = imageFile.url!
+                    let url = URL(string: urlString)!
+                    self.profilePictureField.af_setImage(withURL: url)
                 }
             }
         }
