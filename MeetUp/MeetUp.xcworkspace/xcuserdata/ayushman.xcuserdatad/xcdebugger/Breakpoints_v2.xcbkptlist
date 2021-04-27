@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0F2F04A7-6870-42CE-8B77-81A0DF090F6A"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57385CE3-6309-4D30-BF1C-B2B97B76E176"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeetUp/View Controllers/InviteDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "57385CE3-6309-4D30-BF1C-B2B97B76E176 - c9d09fcb90cb81c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeetUp.InviteDetailsViewController.userid.getter : Swift.String"
+                  moduleName = "MeetUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayushman/Desktop/College%20Stuff/4th%20Semester/CS%20490/MeetUp/MeetUp/MeetUp/View%20Controllers/InviteDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "57385CE3-6309-4D30-BF1C-B2B97B76E176 - 4f7962f30832f1cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeetUp.InviteDetailsViewController.userid.setter : Swift.String"
+                  moduleName = "MeetUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayushman/Desktop/College%20Stuff/4th%20Semester/CS%20490/MeetUp/MeetUp/MeetUp/View%20Controllers/InviteDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "174">
+               </Location>
+               <Location
+                  uuid = "57385CE3-6309-4D30-BF1C-B2B97B76E176 - fc758a316dad6b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeetUp.InviteDetailsViewController.userid.modify : Swift.String"
+                  moduleName = "MeetUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayushman/Desktop/College%20Stuff/4th%20Semester/CS%20490/MeetUp/MeetUp/MeetUp/View%20Controllers/InviteDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "57385CE3-6309-4D30-BF1C-B2B97B76E176 - ceb02b89144f3b3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeetUp.InviteDetailsViewController.userid.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MeetUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayushman/Desktop/College%20Stuff/4th%20Semester/CS%20490/MeetUp/MeetUp/MeetUp/View%20Controllers/InviteDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "57385CE3-6309-4D30-BF1C-B2B97B76E176 - adeae403bdbff0d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeetUp.InviteDetailsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MeetUp.InviteDetailsViewController"
+                  moduleName = "MeetUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayushman/Desktop/College%20Stuff/4th%20Semester/CS%20490/MeetUp/MeetUp/MeetUp/View%20Controllers/InviteDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1441">
+               </Location>
+               <Location
+                  uuid = "57385CE3-6309-4D30-BF1C-B2B97B76E176 - 342c694732b2eb9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeetUp.InviteDetailsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MeetUp.InviteDetailsViewController&gt;"
+                  moduleName = "MeetUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayushman/Desktop/College%20Stuff/4th%20Semester/CS%20490/MeetUp/MeetUp/MeetUp/View%20Controllers/InviteDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1382">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
