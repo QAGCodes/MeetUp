@@ -59,6 +59,37 @@ class UserProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ProfilePicture.layer.masksToBounds = false
+        ProfilePicture.layer.cornerRadius = ProfilePicture.frame.height/2
+            ProfilePicture.clipsToBounds = true
+        
+        let user = PFUser.current()
+        let query = PFQuery(className: "Profile")
+        query.whereKey("user", equalTo: user as Any)
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                // The find succeeded.
+                print("Successfully retrieved \(objects.count) profiles.")
+                // Do something with the found objects
+                if objects.count > 0 {
+                    self.FullName.text = objects[0]["fullname"] as? String
+                    self.UniversityName.text = objects[0]["college"] as? String
+                    self.BioText.text = objects[0]["bio"] as? String
+                    self.InterestsText.text = objects[0]["interests"] as? String
+                    let imageFile = objects[0]["picture"] as! PFFileObject
+                    let urlString = imageFile.url!
+                    let url = URL(string: urlString)!
+                    self.ProfilePicture.af_setImage(withURL: url)
+                }
+            }
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

@@ -90,7 +90,7 @@ class InvitesTableViewController: UITableViewController {
         let inviteDate = currentInvite["date"] as! Date
         
         let formatter3 = DateFormatter()
-        formatter3.dateFormat = "E, MMM d, h:mm a"
+        formatter3.dateFormat = "MM/dd, h:mm a"
         cell.dateTimeLabel.text = formatter3.string(from: inviteDate)
         
         let match = user.objectId as! String
