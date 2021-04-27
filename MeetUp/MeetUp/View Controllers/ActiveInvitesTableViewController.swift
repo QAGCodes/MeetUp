@@ -90,6 +90,9 @@ class ActiveInvitesTableViewController: UITableViewController {
     }
     
     
+
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "editPreviousInactiveSegue"{
@@ -98,6 +101,24 @@ class ActiveInvitesTableViewController: UITableViewController {
                 let editInviteViewController = segue.destination as! EditInviteViewController
                 editInviteViewController.invite = invite
             }
+        }
+        else if segue.identifier == "WhoAccepted" {
+//            if let indexPath = self.tableView.indexPathForSelectedRow {
+//                let invite = invitesDictionary[indexPath.row]
+//                let WhoAcceptedViewController = segue.destination as! WhoAcceptedTableViewController
+//                WhoAcceptedViewController.invite = invite
+//            }
+            let sender = sender as! UIButton
+            guard let cell = sender.superview?.superview as? PreviousInviteCell else {
+                return // or fatalError() or whatever
+            }
+
+            let indexPath = tableView.indexPath(for: cell)
+            let invite = invitesDictionary[indexPath!.row]
+            
+            let invitesDetailsViewController = segue.destination as! WhoAcceptedTableViewController
+            
+            invitesDetailsViewController.invite = invite
         }
         
     }

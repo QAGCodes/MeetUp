@@ -38,6 +38,28 @@ class InvitesTableViewCell: UITableViewCell {
                     current+=1
                     invite["status"] = true
                     invite["accepted"] = current
+                    
+                    
+                    if invite["acceptProfiles"] != nil {
+                        var acceptProfileArr : [String] = invite["acceptProfiles"] as! [String]
+                        if let index = acceptProfileArr.firstIndex(of: (PFUser.current()?.objectId!)!) {
+                            print("user already accepted")
+                        }
+                        else {
+                            acceptProfileArr.append((PFUser.current()?.objectId!)!)
+                        }
+                        
+                        invite["acceptProfiles"] = acceptProfileArr
+                    }
+                    else {
+                        var acceptProfileArr = [String]()
+                        acceptProfileArr.append((PFUser.current()?.objectId!)!)
+                        invite["acceptProfiles"] = acceptProfileArr
+                    }
+                    
+                    
+                    
+                    
                     invite.saveInBackground()
                     print("success")
                     self.acceptButton.setTitle("Cancel", for: .normal)
@@ -54,6 +76,15 @@ class InvitesTableViewCell: UITableViewCell {
                     current-=1
                     invite["status"] = false
                     invite["accepted"] = current
+                    
+                    if invite["acceptProfiles"] != nil {
+                        var acceptProfileArr: [String] = invite["acceptProfiles"] as! [String]
+                        if let index = acceptProfileArr.firstIndex(of: (PFUser.current()?.objectId!)!) {
+                            acceptProfileArr.remove(at: index)
+                        }
+                        invite["acceptProfiles"] = acceptProfileArr
+                    }
+                    
                     invite.saveInBackground()
                     print("success")
                     self.acceptButton.setTitle("Accept", for: .normal)
