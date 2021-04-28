@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import UserNotifications
 
 class UserProfileViewController: UIViewController {
     
@@ -16,11 +17,13 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var BioText: UILabel!
     @IBOutlet weak var InterestsText: UILabel!
     @IBOutlet weak var CreateInviteButton: UIButton!
+    var show = false
     
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        
         
         ProfilePicture.layer.masksToBounds = false
         ProfilePicture.layer.cornerRadius = ProfilePicture.frame.height/2

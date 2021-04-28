@@ -56,6 +56,7 @@
 /* Begin PBXFileReference section */
 		00049CF7262FBF4E007DB868 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		001B826D2623E4A7004E6DBF /* CreateInviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInviteViewController.swift; sourceTree = "<group>"; };
+		0047F55326389064006E04DF /* MeetUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeetUp.entitlements; sourceTree = "<group>"; };
 		00E170A6261E9FED0082E159 /* MeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E170A9261E9FED0082E159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E170AB261E9FED0082E159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		00E170A8261E9FED0082E159 /* MeetUp */ = {
 			isa = PBXGroup;
 			children = (
+				0047F55326389064006E04DF /* MeetUp.entitlements */,
 				7B361F372622D7D6006D5371 /* Cells */,
 				7B361F362622D7B2006D5371 /* View Controllers */,
 				7B361F352622D7A1006D5371 /* Delegates */,
@@ -681,13 +683,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MeetUp/MeetUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42GXJBRR46;
 				INFOPLIST_FILE = MeetUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.meetup.MeetUp;
+				PRODUCT_BUNDLE_IDENTIFIER = meetupAppCS4900;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -700,13 +704,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MeetUp/MeetUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42GXJBRR46;
 				INFOPLIST_FILE = MeetUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.meetup.MeetUp;
+				PRODUCT_BUNDLE_IDENTIFIER = meetupAppCS4900;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

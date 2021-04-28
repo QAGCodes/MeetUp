@@ -84,4 +84,7 @@ class SignupViewController: ViewController {
              self.present(alertView, animated: true, completion:nil)
     }
 
+    @IBAction func onBackPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

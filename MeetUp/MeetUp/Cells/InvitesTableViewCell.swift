@@ -44,6 +44,7 @@ class InvitesTableViewCell: UITableViewCell {
                         var acceptProfileArr : [String] = invite["acceptProfiles"] as! [String]
                         if let index = acceptProfileArr.firstIndex(of: (PFUser.current()?.objectId!)!) {
                             print("user already accepted")
+                            return
                         }
                         else {
                             acceptProfileArr.append((PFUser.current()?.objectId!)!)
@@ -57,10 +58,9 @@ class InvitesTableViewCell: UITableViewCell {
                         invite["acceptProfiles"] = acceptProfileArr
                     }
                     
-                    
-                    
-                    
                     invite.saveInBackground()
+                    //self.sendNotification()
+                    self.sendPushNotifications()
                     print("success")
                     self.acceptButton.setTitle("Cancel", for: .normal)
                 }
@@ -99,5 +99,42 @@ class InvitesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-
+    func sendNotification(){
+        print("sending notification")
+        let push = PFPush()
+        let username = PFUser.current()?["username"] as! String
+        print(username)
+         push.setChannel("accepts")
+         push.setMessage("\(username) accepted your invite!")
+         push.sendInBackground()
+    }
+    
+    func sendPushNotifications() {
+//         let cloudParams : [AnyHashable:String] = [:]
+//         PFCloud.callFunction(inBackground: "pushsample", withParameters: cloudParams, block: {
+//             (result: Any?, error: Error?) -> Void in
+//             if error != nil {
+//                 if let descrip = error?.localizedDescription{
+//                     print(descrip)
+//                 }
+//             }else{
+//                 print(result as! String)
+//             }
+//         })
+        
+        let cloudParams : [AnyHashable:String] = [:]
+                PFCloud.callFunction(inBackground: "sendPushToAllUsers", withParameters: cloudParams, block: {
+                    (result: Any?, error: Error?) -> Void in
+                    if error != nil {
+                        if let descrip = error?.localizedDescription{
+                            print(descrip)
+                        }else{
+                            print("error")
+                        }
+                    }else{
+                        print("Success Finally")
+                    }
+                })
+    
+    }
 }
