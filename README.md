@@ -8,7 +8,7 @@ Original App Design Project - README Template
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
-3. [Narrated Walkthrough](#Narrated Walkthrough)
+3. [Narrated Walkthrough](#Narrated-Walkthrough)
 
 ## Overview
 ### Description
@@ -176,6 +176,6 @@ We are already done with designing most of the screens. By this monday, we will 
 
 ![Last sprint demonstration](https://github.com/MeetUpAppGroup/MeetUp/blob/main/Screen%20Recording%202021-04-25%20at%2011.32.39%20PM.gif)
 
-##Narrated Walkthrough
-![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/walkthrough.mov)
+## Narrated Walkthrough
+https://github.com/MeetUpAppGroup/MeetUp/blob/main/walkthrough.mov
 
