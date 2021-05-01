@@ -10,6 +10,9 @@ Original App Design Project - README Template
 2. [Schema](#Schema)
 3. [Narrated Walkthrough](#Narrated-Walkthrough)
 
+# Link to the app walkthrough:
+- https://youtu.be/wSLUah-fBr8
+
 ## Overview
 ### Description
 MeetUp is an app that instantly connects you with people around you. Unlike Tinder and Bumble, which are mainly aimed at forming romantic relationships which makes people more reluctant to chat with others, MeetUp is about meeting someone new for a coffee, lunch, or even just exchanging talks about a subject that both users are interested in, all easily and with no hassle. The instantaneous aspect of MeetUp (to immediatly find someone to meet on the spot) is one of the app's important features, which are hard to provide in other geosocial networking applications.
