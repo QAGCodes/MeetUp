@@ -1,23 +1,25 @@
-Original App Design Project - README Template
-===
-
-# MeetUp
+# MeetUp - College Social Networking App
 
 ## Table of Contents
+
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
-3. [Narrated Walkthrough](#Narrated-Walkthrough)
+1. [Schema](#Schema)
+1. [Narrated Walkthrough](#Progress-GIFs)
 
 # Link to the Narrated walkthrough:
+
 - https://youtu.be/wSLUah-fBr8
 
 ## Overview
+
 ### Description
-MeetUp is an app that instantly connects you with people around you. Unlike Tinder and Bumble, which are mainly aimed at forming romantic relationships which makes people more reluctant to chat with others, MeetUp is about meeting someone new for a coffee, lunch, or even just exchanging talks about a subject that both users are interested in, all easily and with no hassle. The instantaneous aspect of MeetUp (to immediatly find someone to meet on the spot) is one of the app's important features, which are hard to provide in other geosocial networking applications.
+
+MeetUp is an app created by a group of Purdue students that instantly connects you with people around you. Unlike Tinder and Bumble, which are mainly aimed at forming romantic relationships which makes people more reluctant to chat with others, MeetUp is about meeting someone new for a coffee, lunch, or even just exchanging talks about a subject that both users are interested in, all easily and with no hassle. The instantaneous aspect of MeetUp (to immediatly find someone to meet on the spot) is one of the app's important features, which are hard to provide in other geosocial networking applications.
 
 ### App Evaluation
+
 - **Category:** Geosocial networking
 - **Mobile:** The concept is most suitable to be applied on a mobile device, where one is able to use it instantly anywhere. The app relies on the idea that it is real-time and easy to access. Whenever you're bored you can instantly use it anywhere.
 - **Story:** Getting to know new people and forming valuable connections might be hard to a fair amount of us, and quarantine season didn't help the cause at all since most of us were unable to go out or even get together with friends.
@@ -30,6 +32,7 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
+
 - [x] User can sign in
 - [x] User can sign up
 - [x] User is taken to a screen to create their profile
@@ -37,7 +40,7 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 - [x] User can accept invites
 - [x] User can view who accepted the invite
 - [x] User is requested access to notifications
-- [x] User is requested access to camera roll 
+- [x] User is requested access to camera roll
 - [x] Page for user to post invites
 - [x] User can post invites with their data being stored in the database
 - [x] Page for user to create/edit profile
@@ -48,137 +51,117 @@ MeetUp is an app that instantly connects you with people around you. Unlike Tind
 - [x] User can see app icon
 - [x] User can see a styled launch screen
 
-**Optional Nice-to-have Stories**
-
-* A quick ice breaker game to ease into the conversation 
-* A Spotify/Apple playlist option
-* An Instagram profile preview
-* Messaging/chat
-
-
 ### 2. Screen Archetypes
 
-* Login
-* Signup 
-    * Users are prompted to sign up after downloading the app. Access to the rest of the app is given after they successfully register. 
-* Stream
-    * A list of users who have an open invitation based on the nearby locations
-* Profile Screen 
-    * Allows the user to upload a profile photo.
-    * Shows the user’s interests, and hobbies
-* Setup Details
-    * This is where the user sets up an invite. They add a max number of people who can accept the invite, location, date and time and special notes.
-* Invite Details
-    * Where a user can view the details of an invite and accept if interested 
-* Edit Invite
-    * Where the user can edit their invite, change time, location or close it.
-
+- Login
+- Signup
+  - Users are prompted to sign up after downloading the app. Access to the rest of the app is given after they successfully register.
+- Stream
+  - A list of users who have an open invitation based on the nearby locations
+- Profile Screen
+  - Allows the user to upload a profile photo.
+  - Shows the user’s interests, and hobbies
+- Setup Details
+  - This is where the user sets up an invite. They add a max number of people who can accept the invite, location, date and time and special notes.
+- Invite Details
+  - Where a user can view the details of an invite and accept if interested
+- Edit Invite
+  - Where the user can edit their invite, change time, location or close it.
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Invites(stream)
-* Profile
-* Settings
-
-**Optional**
-* Chat
-
-
+- Invites(stream)
+- Profile
+- Settings
 
 **Flow Navigation** (Screen to Screen)
 
-* Login Screen
-  * Invite Stream
-* Registration Screen
-  * Invite Stream
-* Invite Stream 
-  * Invite Details, date time and location
-* User Profile
-  * Profile photo, user and hobbies as well as list of previous invites
-* Set up invite
-  * Invite set up screen
-  * Invite Stream
-* Settings
-  * User profile
-
+- Login Screen
+  - Invite Stream
+- Registration Screen
+  - Invite Stream
+- Invite Stream
+  - Invite Details, date time and location
+- User Profile
+  - Profile photo, user and hobbies as well as list of previous invites
+- Set up invite
+  - Invite set up screen
+  - Invite Stream
+- Settings
+  - User profile
 
 ## Wireframes
+
 <img src="MeetUp_Wireframe.png" width=600>
 
+## Schema
 
-## Schema 
 ### Models
+
 #### Users
 
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | Userid | Integer | Unique identifier across tables for each user |   
-   | Username | String | Username to be used for identification in invites and login |
-   | Password | String | Used for logging in |
+| Property | Type    | Description                                                 |
+| -------- | ------- | ----------------------------------------------------------- |
+| Userid   | Integer | Unique identifier across tables for each user               |
+| Username | String  | Username to be used for identification in invites and login |
+| Password | String  | Used for logging in                                         |
 
 #### Profiles
 
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | Full Name | String | User’s first and last name |
-   | College | String | College user attends |
-   | Major | String | User’s major |
-   | Year | String | User’s current year in college |
-   | Interests | String | User’s interests |
-   | Userid | Integer | Unique identifier for each user |
-   | Bio | String | User’s bio |
-   | Profile Image | File | Image uploaded by user |
+| Property      | Type    | Description                     |
+| ------------- | ------- | ------------------------------- |
+| Full Name     | String  | User’s first and last name      |
+| College       | String  | College user attends            |
+| Major         | String  | User’s major                    |
+| Year          | String  | User’s current year in college  |
+| Interests     | String  | User’s interests                |
+| Userid        | Integer | Unique identifier for each user |
+| Bio           | String  | User’s bio                      |
+| Profile Image | File    | Image uploaded by user          |
 
 #### Invites
 
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | userid | integer | ID of users that post them |
-   | inviteid | integer | identifier for each invite |
-   | time | string | time user wants to hangout |
-   | location | string | whether the user wants to meet |
-   | status | bool | status of invite, active or inactive |
-   | invite details | string | users description of invite |
-   | date | date date of the meet up |
+| Property       | Type                     | Description                          |
+| -------------- | ------------------------ | ------------------------------------ |
+| userid         | integer                  | ID of users that post them           |
+| inviteid       | integer                  | identifier for each invite           |
+| time           | string                   | time user wants to hangout           |
+| location       | string                   | whether the user wants to meet       |
+| status         | bool                     | status of invite, active or inactive |
+| invite details | string                   | users description of invite          |
+| date           | date date of the meet up |
 
-
-
-
-
- 
 ### Networking
+
 #### List of network requests by screen
-   - login screen
-      - (Read/GET) Verify that the user exists in the database and the password is correct
-   - sign up screen
-      - (POST) register the user's details (first and last names, username, password) into the database
-   - invite stream screen
-      - (Read/GET) query active invites from the database
-   - invite details screen
-      - (Read/GET) query active invites from the database
-   - user profile screen
-      - (Read/GET) query the selected invite from the database to show its details on the screen
-   - edit profile screen
-      - (POST/GET) query the current user's profile from the database and post the changes to the database again
-   - create invites screen
-      - (POST) post the invite's details to the database
-   - previous invites screen
-      - (Read/GET) query both active and inactive invites of the user from the database
-   - edit invite screen
-      - (POST/GET) query the selected invite from the database and post the changes to the database again
+
+- login screen
+  - (Read/GET) Verify that the user exists in the database and the password is correct
+- sign up screen
+  - (POST) register the user's details (first and last names, username, password) into the database
+- invite stream screen
+  - (Read/GET) query active invites from the database
+- invite details screen
+  - (Read/GET) query active invites from the database
+- user profile screen
+  - (Read/GET) query the selected invite from the database to show its details on the screen
+- edit profile screen
+  - (POST/GET) query the current user's profile from the database and post the changes to the database again
+- create invites screen
+  - (POST) post the invite's details to the database
+- previous invites screen
+  - (Read/GET) query both active and inactive invites of the user from the database
+- edit invite screen
+  - (POST/GET) query the selected invite from the database and post the changes to the database again
 
 ### Progress GIFs
-#### Week 1
-We are already done with designing most of the screens. By this monday, we will have finished them all and we will be moving to work on the code and integrating the different parts to work together as intended.
-![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/ezgif.com-video-to-gif-3.gif)
-![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/ezgif.com-video-to-gif-4.gif)
 
-![](https://github.com/MeetUpAppGroup/MeetUp/blob/main/sprint3.gif)
+![](ezgif.com-video-to-gif-3.gif)
+![](ezgif.com-video-to-gif-4.gif)
+![](sprint3.gif)
 
-![Last sprint demonstration](https://github.com/MeetUpAppGroup/MeetUp/blob/main/Screen%20Recording%202021-04-25%20at%2011.32.39%20PM.gif)
+# Final Product
 
-
-
-
+![Last sprint demonstration](Screen%20Recording%202021-04-25%20at%2011.32.39%20PM.gif)
